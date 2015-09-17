@@ -17,7 +17,7 @@ Remove and add fields to the user profile page.
 Clears out generated unwanted stuff from the wp_head hook.
 
 #### Extras
-A pretty personal collection of good, fun and sometimes unecessary functions
+A pretty personal collection of good, fun and just necessary functions
 to make WordPress development easier.
 
 ## How to Collaborate
