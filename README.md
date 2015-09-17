@@ -5,16 +5,16 @@ to make it easier for clients to work and me to view the code.
 ## Content
 
 ### User capabilites
-Remove and add capabilites to roles and users.
+Remove and add administrating capabilites to specific roles or users. Like preventing user to switch themes or delete others posts.
 
 ### Admin menu
-Hide items in the admin menu.
+Hide items in the admin menu. Because who uses Media anyways?
 
 ### Profile fields
 Remove and add fields to the user profile page.
 
 ### Clean head
-Clears out generated unwanted stuff from the wp_head hook.
+Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version
 
 #### Extras
 A pretty personal collection of good, fun and just necessary functions
