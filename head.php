@@ -3,8 +3,8 @@
 /**
  * Remove feeds and wordpress-specific content that is generated on the wp_head hook.
  */
-function removeHeadLinks() {
 
+add_action('init', function () {
   // Remove
   remove_action('wp_head', 'rsd_link');
 
@@ -19,6 +19,4 @@ function removeHeadLinks() {
 
   // Remove the displayed XHTML generator
   remove_action('wp_head', 'wp_generator');
-}
-
-add_action('init', 'removeHeadLinks');
+});
