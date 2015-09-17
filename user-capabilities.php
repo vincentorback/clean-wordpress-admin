@@ -6,10 +6,11 @@
  *
  * `remove_cap` can be changed to `app_cap`
  */
-function add_theme_caps() {
+add_action( 'admin_init', function () {
+
   // Target (roles or user)
   $cap_target = get_role('editor');
-  // $cap_target = new WP_User( $user_id );
+  /* $cap_target = new WP_User( $user_id ); */
 
   // Super Admin
   $cap_target->remove_cap('manage_network');
@@ -119,6 +120,5 @@ function add_theme_caps() {
 
   // Not available to anyone
   $cap_target->remove_cap('unfiltered_upload');
-}
 
-add_action( 'admin_init', 'add_theme_caps');
+});
