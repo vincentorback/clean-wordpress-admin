@@ -5,16 +5,16 @@
  */
 
 add_action('init', function () {
-  // Remove
+  // Remove the Really Simple Discovery service link
   remove_action('wp_head', 'rsd_link');
 
-  // Remove
+  // Remove the link to the Windows Live Writer manifest
   remove_action('wp_head', 'wlwmanifest_link');
 
-  // Remove
+  // Remove the general feeds
   remove_action('wp_head', 'feed_links', 2);
 
-  // Remove
+  // Remove the extra feeds, such as category feeds
   remove_action('wp_head','feed_links_extra', 3);
 
   // Remove the displayed XHTML generator
