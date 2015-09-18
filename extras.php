@@ -4,15 +4,15 @@
 /**
  * Check if on posts-page
  */
-function is_page_for_posts() {
-  return (is_home() || (is_archive() && ! is_post_type_archive()));
+function is_page_for_posts () {
+  return ( is_home() || (is_archive() && ! is_post_type_archive() ) );
 }
 
 
 /**
  * Custom admin footer
  */
-add_filter('admin_footer_text', function () {
+add_filter( 'admin_footer_text', function () {
   echo '<span id="footer-thankyou">Website by <a href="//vincentorback.se" target="_blank">Vincent Orback</a></span>';
 });
 
@@ -44,7 +44,7 @@ add_action( 'admin_menu', function () {
 
 add_action( 'wp_before_admin_bar_render', function () {
   global $wp_admin_bar;
-  $wp_admin_bar->remove_menu('comments');
+  $wp_admin_bar->remove_menu( 'comments' );
 });
 
 
@@ -52,7 +52,7 @@ add_action( 'wp_before_admin_bar_render', function () {
  * Custom avatar
  */
 add_filter( 'avatar_defaults', function ($avatar_defaults) {
-  $my_avatar = get_bloginfo('template_directory') . '/images/my-avatar.gif';
+  $my_avatar = get_bloginfo( 'template_directory' ) . '/images/my-avatar.gif';
   $avatar_defaults[$my_avatar] = "My Avatar";
   return $avatar_defaults;
 });
