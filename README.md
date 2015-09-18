@@ -20,6 +20,12 @@ Clears out generated unwanted stuff from the wp_head hook. Such as feeds and Wor
 A pretty personal collection of good, fun and just necessary functions
 to make WordPress development easier.
 
+## TODO
+- [ ] Hide/add items in the Admin bar
+- [ ] Hide links to WordPress documentations, forum etc.
+- [ ] Hide specific items in post/page edit page.
+- [ ] Hide/add items to the WYSIWYG
+
 ## Using
 Hiding content is often something you want to do for you clients so that they don’t destroy your beautiful site. I usually use these back-end cleaning after checking that the user is not the admin.
 ```php
