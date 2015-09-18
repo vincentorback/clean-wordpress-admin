@@ -23,7 +23,7 @@ to make WordPress development easier.
 ## Using
 Hiding content is often something you want to do for you clients so that they don’t destroy your beautiful site. I usually use these back-end cleaning after checking that the user is not the admin.
 ```php
-if (!current_user_can('administrator')) {
+if ( ! current_user_can( 'administrator' ) ) {
   // Clean it up!
 }
 ```
