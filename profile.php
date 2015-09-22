@@ -2,7 +2,9 @@
 
 
 /**
- * Remove default user fields
+ * Remove default user contact fields
+ *
+ * @return Array for contact methods
  */
 add_filter( 'user_contactmethods', function () {
   // Add new
@@ -21,8 +23,9 @@ add_filter( 'user_contactmethods', function () {
 
 /**
  * Removes the "About Yourself / Biographical Info" field.
- *
  * Looks pretty bad but it’s this or jQuery :/
+ *
+ * @param $buffer Output buffer
  */
  function remove_plain_bio( $buffer) {
   $titles = array( '#<h3>About Yourself</h3>#', '#<h3>About the user</h3>#' );

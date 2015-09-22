@@ -7,7 +7,6 @@
  * `remove_cap` can be changed to `app_cap`
  */
 add_action( 'admin_init', function () {
-
   // Target (roles or user)
   $cap_target = get_role( 'editor' );
   /* $cap_target = new WP_User( $user_id ); */
@@ -120,5 +119,4 @@ add_action( 'admin_init', function () {
 
   // Not available to anyone
   $cap_target->remove_cap( 'unfiltered_upload' );
-
 });

@@ -3,7 +3,6 @@
 /**
  * Hide admin menu items. Can be both parents and children in
  * dropdowns. Specify link to parent and link to child.
- * @return [type] [description]
  */
 add_action( 'admin_head', function () {
   remove_menu_page( 'index.php' ); // Dashboard

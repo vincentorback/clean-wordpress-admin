@@ -19,8 +19,8 @@ add_filter( 'admin_footer_text', function () {
 
 /**
  * Nice debugging replacement to var_dump
- * @param  [type] $data [description]
- * @return [type]       [description]
+ *
+ * @param $data Object you want to test.
  */
 function show ($data) {
   echo '<pre style="box-sizing: border-box; height: 50vh; resize: vertical;
@@ -49,7 +49,9 @@ add_action( 'wp_before_admin_bar_render', function () {
 
 
 /**
- * Custom avatar
+ * 
+ *
+ * @param $avatar_defaults Array of existing avatars
  */
 add_filter( 'avatar_defaults', function ($avatar_defaults) {
   $my_avatar = get_bloginfo( 'template_directory' ) . '/images/my-avatar.gif';
