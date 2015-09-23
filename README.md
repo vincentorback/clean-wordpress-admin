@@ -32,8 +32,8 @@ if ( ! current_user_can( 'administrator' ) ) {
 ```
 
 ## TODO
-- [ ] Hide/add items in the Admin bar
-- [ ] Hide links to WordPress documentation, forum etc.
+- [x] Hide/add items in the Admin bar
+- [ ] Hide links to WordPress help, documentation, forum etc.
 - [ ] Hide specific items in post/page edit page.
 - [ ] Hide/add items to the WYSIWYG
 
