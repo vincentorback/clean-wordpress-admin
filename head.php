@@ -3,7 +3,6 @@
 /**
  * Remove feeds and wordpress-specific content that is generated on the wp_head hook.
  */
-
 add_action( 'init', function () {
   // Remove the Really Simple Discovery service link
   remove_action( 'wp_head', 'rsd_link' );

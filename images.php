@@ -10,4 +10,4 @@ add_action( 'admin_init', function () {
   if ( $image_set !== 'none' ) {
     update_option( 'image_default_link_type', 'none' );
   }
-}, 10);
+});

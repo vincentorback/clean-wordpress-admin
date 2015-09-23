@@ -13,12 +13,12 @@ add_filter( 'user_contactmethods', function () {
   $contact_methods['facebook'] = 'Facebook';
 
   // Remove existing
-  unset($contact_methods['aim']);
-  unset($contact_methods['jabber']);
-  unset($contact_methods['yim']);
+  unset( $contact_methods['aim'] );
+  unset( $contact_methods['jabber'] );
+  unset( $contact_methods['yim'] );
 
   return $contact_methods;
-}, 10, 1);
+});
 
 
 /**
