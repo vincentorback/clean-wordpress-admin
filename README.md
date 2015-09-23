@@ -1,6 +1,7 @@
 # Clean WordPress Admin
 A collection of functions to clean up WordPress front-end and back-end
-to make it easier for clients to work and me to view the code.
+to make it easier for editors to work and for you to look at the source code.
+Hiding content is also a good thing to do to limit the possibilities for your clients to destroy your beautiful site.
 
 ## Content
 
@@ -21,7 +22,9 @@ A pretty personal collection of good, fun and just necessary functions
 to make WordPress development easier.
 
 ## Using
-Hiding content is often something you want to do for you clients so that they don’t destroy your beautiful site. I usually use these back-end cleaning after checking that the user is not the admin.
+Don’t just include these files in your project. Look at the content, update the options and see what works for you!
+
+ I usually use the back-end cleaning functions after checking that the user isn’t the admin like this:
 ```php
 if ( ! current_user_can( 'administrator' ) ) {
   // Clean it up!
