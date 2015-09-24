@@ -35,7 +35,7 @@ if ( ! current_user_can( 'administrator' ) ) {
 - [x] Hide/add items in the Admin bar
 - [x] Hide links to WordPress help, documentation, forum etc.
 - [ ] Hide specific items in post/page edit page.
-- [ ] Hide/add items to the WYSIWYG
+- [x] Hide/add items to the WYSIWYG
 - [ ] Add custom contextual tabs
 
 ## How to collaborate
