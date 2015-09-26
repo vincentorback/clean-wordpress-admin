@@ -6,18 +6,19 @@
  *
  * @return Array for contact methods
  */
-add_filter( 'user_contactmethods', function () {
-  // Add new
-  $contact_methods['phone'] = 'Phone';
-  $contact_methods['twitter'] = 'Twitter';
-  $contact_methods['facebook'] = 'Facebook';
+add_filter( 'user_contactmethods', function ( $user_contact ) {
 
   // Remove existing
-  unset( $contact_methods['aim'] );
-  unset( $contact_methods['jabber'] );
-  unset( $contact_methods['yim'] );
+  unset( $user_contact['aim'] );
+  unset( $user_contact['jabber'] );
+  unset( $user_contact['yim'] );
 
-  return $contact_methods;
+  // Add new
+  $user_contact['phone'] = 'Phone';
+  $user_contact['twitter'] = 'Twitter';
+  $user_contact['facebook'] = 'Facebook';
+
+  return $user_contact;
 });
 
 
