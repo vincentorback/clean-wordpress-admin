@@ -7,7 +7,7 @@ Hiding content is also a good thing to do to limit the possibilities for your cl
 ## Content
 
 ### Admin menu
-Hide items and sub-items in the admin menu.
+Hide items and sub-items in the admin menu. Also known as the Toolbar.
 
 ### Clean head
 Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
@@ -44,4 +44,8 @@ if ( ! current_user_can( 'administrator' ) ) {
 - [x] Hide links to WordPress help, documentation, forum etc.
 - [x] Hide/add items to the WYSIWYG
 - [x] Add custom contextual tabs
+- [ ] Hide WYSIWYG on specific post types
+- [ ] Completely remove the dashboard
+- [ ] Remove update notifications regarding core, plugins and themes updates
+- [ ] Hide specific meta boxes on different post type pages
 - [ ] [Suggest something!?](https://github.com/vincentorback/clean-wordpress-admin/issues)
