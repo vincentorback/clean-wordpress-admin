@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Hide the admin bar
+ * Hide the admin bar on the front-end
  */
 add_filter('show_admin_bar', '__return_false' );
 
