@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * Hide the admin bar
+ */
+add_filter('show_admin_bar', '__return_false');
+
+
+/**
  * Hide or create new menus and items in the admin bar.
  */
 add_action( 'admin_bar_menu', function ( $admin_bar ) {
