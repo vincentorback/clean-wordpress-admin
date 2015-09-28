@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Check if on posts-page
  */
@@ -50,7 +49,6 @@ add_filter( 'avatar_defaults', function ( $avatar_defaults ) {
   $avatar_defaults[$my_avatar] = "My Avatar";
   return $avatar_defaults;
 }, 999);
-
 
 
 /**

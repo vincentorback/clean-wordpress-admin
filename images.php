@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Remove default links on images
  */

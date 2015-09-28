@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Updating role/user capabilities
  *

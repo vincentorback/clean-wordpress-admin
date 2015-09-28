@@ -8,7 +8,7 @@
  * Visual Editor - .user-rich-editing-wrap
  * Show Toolbar - .show-admin-bar
  */
-add_action('admin_print_scripts-profile.php', function () {
+add_action( 'admin_print_scripts-profile.php', function () {
   ?><style>.user-rich-editing-wrap,.user-comment-shortcuts-wrap,.user-admin-color-wrap,.show-admin-bar{display:none;}</style><?php
 });
 
