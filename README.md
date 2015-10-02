@@ -21,6 +21,9 @@ Remove dashboard metaboxes or even the whole dashboard itself.
 ### Notifications
 Remove notifications about core/plugin updates.
 
+### Posts
+Remove specific metaboxes from post-types.
+
 ### Profile fields
 Remove and add fields on the user profile page. Like contact information or the Biographical Info section.
 
@@ -50,8 +53,8 @@ if ( ! current_user_can( 'administrator' ) ) {
 - [x] Hide links to WordPress help, documentation, forum etc.
 - [x] Hide/add items to the WYSIWYG
 - [x] Add custom contextual tabs
-- [ ] Hide WYSIWYG on specific post types
-- [ ] Hide specific meta boxes on different post type pages
+- [x] Hide WYSIWYG on specific post types
 - [x] Completely remove the dashboard
 - [x] Remove update notifications regarding core, plugins and themes updates
+- [x] Hide specific meta boxes on different post type pages
 - [ ] [Suggest something!?](https://github.com/vincentorback/clean-wordpress-admin/issues)
