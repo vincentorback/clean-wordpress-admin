@@ -9,7 +9,9 @@ add_action( 'admin_init', function () {
 
   // Target (roles or user)
   $cap_target = get_role( 'editor' );
-  /* $cap_target = new WP_User( $user_id ); */
+
+  // $user_id = '???' // The ID of the user to remove the capability from.
+  // $cap_target = new WP_User( $user_id );
 
   // Super Admin
   $cap_target->remove_cap( 'manage_network' );
