@@ -15,6 +15,9 @@ Clears out generated unwanted stuff from the wp_head hook. Such as feeds and Wor
 ### Contextual tabs
 Remove all, remove specific or add new contextual tabs with information about how to use the interface on the current page in the WordPress admin.
 
+### Dashboard
+Remove dashboard metaboxes or even the whole dashboard itself.
+
 ### Profile fields
 Remove and add fields on the user profile page. Like contact information or the Biographical Info section.
 
@@ -45,7 +48,7 @@ if ( ! current_user_can( 'administrator' ) ) {
 - [x] Hide/add items to the WYSIWYG
 - [x] Add custom contextual tabs
 - [ ] Hide WYSIWYG on specific post types
-- [ ] Completely remove the dashboard
 - [ ] Remove update notifications regarding core, plugins and themes updates
 - [ ] Hide specific meta boxes on different post type pages
+- [x] Completely remove the dashboard
 - [ ] [Suggest something!?](https://github.com/vincentorback/clean-wordpress-admin/issues)
