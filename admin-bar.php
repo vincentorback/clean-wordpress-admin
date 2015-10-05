@@ -3,11 +3,12 @@
 /**
  * Hide the admin bar on the front-end
  */
-add_filter('show_admin_bar', '__return_false' );
+add_filter( 'show_admin_bar', '__return_false' );
 
 
 /**
  * Hide or create new menus and items in the admin bar.
+ * Indentation shows sub-items.
  */
 add_action( 'admin_bar_menu', function ( $admin_bar ) {
 

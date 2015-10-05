@@ -40,7 +40,7 @@ add_filter( 'user_contactmethods', function ( $user_contact ) {
  *
  * @param $buffer Output buffer
  */
- function remove_plain_bio( $buffer) {
+function remove_plain_bio( $buffer) {
   $titles = array( '#<h3>About Yourself</h3>#', '#<h3>About the user</h3>#' );
   $buffer = preg_replace( $titles, '<h3>Password</h3>', $buffer, 1 );
   $biotable = '#<h3>Password</h3>.+?<table.+?/tr>#s';
