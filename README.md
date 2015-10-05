@@ -38,9 +38,9 @@ A pretty personal collection of good, fun and just necessary functions to make W
 
 
 ## Using
-Don’t just include these files in your project. Look at the content, update the options and see what works for you!
+Don’t just include the files in your project and be done. Look at the content, update the options and see what works for you!
 
- I usually use the back-end cleaning functions after checking that the user isn’t the admin like this:
+ You should probably keep some things visible for you or a super admin. Check the user role like this:
 ```php
 if ( ! current_user_can( 'administrator' ) ) {
   // Clean it up!
