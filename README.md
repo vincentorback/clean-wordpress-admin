@@ -57,4 +57,5 @@ if ( ! current_user_can( 'administrator' ) ) {
 - [x] Completely remove the dashboard
 - [x] Remove update notifications regarding core, plugins and themes updates
 - [x] Hide specific meta boxes on different post type pages
+- [ ] Add links to WordPress codex in comments or at the top of files
 - [ ] [Suggest something!?](https://github.com/vincentorback/clean-wordpress-admin/issues)
