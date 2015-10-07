@@ -19,7 +19,6 @@ add_action( 'admin_print_scripts-profile.php', function () {
  * @return Array of contact methods
  */
 add_filter( 'user_contactmethods', function ( $user_contact ) {
-
   // Remove existing
   unset( $user_contact['aim'] );
   unset( $user_contact['jabber'] );

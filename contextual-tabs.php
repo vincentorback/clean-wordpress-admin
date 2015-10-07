@@ -4,7 +4,6 @@
  * Remove Help Tab
  */
  add_filter( 'contextual_help', function ( $old_help, $screen_id, $screen ) {
-
    // Remove all help tabs
    $screen->remove_help_tabs();
 
