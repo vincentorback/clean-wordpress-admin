@@ -35,7 +35,7 @@ add_action( 'admin_bar_menu', function ( $admin_bar ) {
     'meta'  => array( 'class' => 'my-bar-menu' )
   ));
 
-  // Add custom node
+  // Add custom menu item
   $admin_bar->add_node( array(
     'id'    => 'my_bar_node',
     'title' => 'My bar node',

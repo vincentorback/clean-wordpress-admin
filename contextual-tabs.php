@@ -2,6 +2,10 @@
 
 /**
  * Remove Help Tab
+ *
+ * @param $old_help
+ * @param $screen_id
+ * @param $screen
  */
  add_filter( 'contextual_help', function ( $old_help, $screen_id, $screen ) {
    // Remove all help tabs
@@ -14,9 +18,9 @@
 
    // Add custom tab
    $screen->add_help_tab( array(
-     'id' => 'my-help-tab',            //unique id for the tab
-     'title' => 'My help tab',      //unique visible title for the tab
-     'content' => '<p>Hello world!</p>'  //actual help text
+     'id' => 'my-help-tab',             // Unique id for the tab
+     'title' => 'My help tab',          // Unique visible title for the tab
+     'content' => '<p>Hello world!</p>' // Actual help text
   ));
  }, 999, 3);
 

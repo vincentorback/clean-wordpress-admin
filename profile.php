@@ -9,13 +9,20 @@
  * Show Toolbar - .show-admin-bar
  */
 add_action( 'admin_print_scripts-profile.php', function () {
-  ?><style>.user-rich-editing-wrap,.user-comment-shortcuts-wrap,.user-admin-color-wrap,.show-admin-bar{display:none;}</style><?php
+  ?><style>
+  .user-rich-editing-wrap,
+  .user-comment-shortcuts-wrap,
+  .user-admin-color-wrap,
+  .show-admin-bar {
+    display: none;
+  }</style><?php
 });
 
 
 /**
  * Remove default user contact fields
  *
+ * @param $user_contact Existing contact methods
  * @return Array of contact methods
  */
 add_filter( 'user_contactmethods', function ( $user_contact ) {

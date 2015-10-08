@@ -22,7 +22,7 @@ function show ( $data ) {
 
 
 /**
- * Disable comments
+ * Totaly disable comments
  */
 add_action( 'init', function () {
   remove_post_type_support( 'post', 'comments' );
@@ -40,9 +40,8 @@ add_action( 'wp_before_admin_bar_render', function () {
 
 
 /**
- * Custom user avatars.
- *
- * @param $avatar_defaults Array of existing avatars
+ * Custom avatars.
+ * * @param $user_contact Existing avatars
  */
 add_filter( 'avatar_defaults', function ( $avatar_defaults ) {
   $my_avatar = get_bloginfo( 'template_directory' ) . '/images/my-avatar.gif';

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Removing unnecessary dashboard widgets.
+ * Removing dashboard widgets.
  */
 add_action( 'admin_init', function () {
   // Removes the 'incoming links' metabox
