@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Updating role/user capabilities
- *
+ * Role and user capabilities
  * `remove_cap` can be changed to `app_cap`
- */
+*/
+
 add_action( 'admin_init', function () {
 
   // Target (roles or user)
@@ -25,38 +25,17 @@ add_action( 'admin_init', function () {
   $cap_target->remove_cap( 'activate_plugins' );
   $cap_target->remove_cap( 'delete_others_pages' );
   $cap_target->remove_cap( 'delete_others_posts' );
-  $cap_target->remove_cap( 'delete_pages' );
   $cap_target->remove_cap( 'delete_posts' );
-  $cap_target->remove_cap( 'delete_private_pages' );
-  $cap_target->remove_cap( 'delete_private_posts' );
   $cap_target->remove_cap( 'delete_published_pages' );
-  $cap_target->remove_cap( 'delete_published_posts' );
   $cap_target->remove_cap( 'edit_dashboard' );
-  $cap_target->remove_cap( 'edit_others_pages' );
-  $cap_target->remove_cap( 'edit_others_posts' );
-  $cap_target->remove_cap( 'edit_pages' );
-  $cap_target->remove_cap( 'edit_posts' );
-  $cap_target->remove_cap( 'edit_private_pages' );
-  $cap_target->remove_cap( 'edit_private_posts' );
-  $cap_target->remove_cap( 'edit_published_pages' );
-  $cap_target->remove_cap( 'edit_published_posts' );
   $cap_target->remove_cap( 'edit_theme_options' );
   $cap_target->remove_cap( 'export' );
   $cap_target->remove_cap( 'import' );
   $cap_target->remove_cap( 'list_users' );
-  $cap_target->remove_cap( 'manage_categories' );
-  $cap_target->remove_cap( 'manage_links' );
   $cap_target->remove_cap( 'manage_options' );
-  $cap_target->remove_cap( 'moderate_comments' );
   $cap_target->remove_cap( 'promote_users' );
-  $cap_target->remove_cap( 'publish_pages' );
-  $cap_target->remove_cap( 'publish_posts' );
-  $cap_target->remove_cap( 'read_private_pages' );
-  $cap_target->remove_cap( 'read_private_posts' );
-  $cap_target->remove_cap( 'read' );
   $cap_target->remove_cap( 'remove_users' );
   $cap_target->remove_cap( 'switch_themes' );
-  $cap_target->remove_cap( 'upload_files' );
 
   // Additional Admin Capabilities (available on single sites)
   $cap_target->remove_cap( 'update_core' );
@@ -72,49 +51,36 @@ add_action( 'admin_init', function () {
   $cap_target->remove_cap( 'edit_users' );
   $cap_target->remove_cap( 'create_users' );
   $cap_target->remove_cap( 'delete_users' );
-  $cap_target->remove_cap( 'unfiltered_html' );
 
   // Editor
   $cap_target->remove_cap( 'delete_others_pages' );
   $cap_target->remove_cap( 'delete_others_posts' );
   $cap_target->remove_cap( 'delete_pages' );
-  $cap_target->remove_cap( 'delete_posts' );
   $cap_target->remove_cap( 'delete_private_pages' );
   $cap_target->remove_cap( 'delete_private_posts' );
   $cap_target->remove_cap( 'delete_published_pages' );
-  $cap_target->remove_cap( 'delete_published_posts' );
   $cap_target->remove_cap( 'edit_others_pages' );
   $cap_target->remove_cap( 'edit_others_posts' );
   $cap_target->remove_cap( 'edit_pages' );
-  $cap_target->remove_cap( 'edit_posts' );
   $cap_target->remove_cap( 'edit_private_pages' );
   $cap_target->remove_cap( 'edit_private_posts' );
   $cap_target->remove_cap( 'edit_published_pages' );
-  $cap_target->remove_cap( 'edit_published_posts' );
-  $cap_target->remove_cap( 'manage_categories' );
   $cap_target->remove_cap( 'manage_links' );
   $cap_target->remove_cap( 'moderate_comments' );
   $cap_target->remove_cap( 'publish_pages' );
-  $cap_target->remove_cap( 'publish_posts' );
-  $cap_target->remove_cap( 'read' );
   $cap_target->remove_cap( 'read_private_pages' );
   $cap_target->remove_cap( 'read_private_posts' );
   $cap_target->remove_cap( 'unfiltered_html' ); // not available on multisites
-  $cap_target->remove_cap( 'upload_files' );
 
   // Author
-  $cap_target->remove_cap( 'delete_posts' );
-  $cap_target->remove_cap( 'delete_published_posts' );
-  $cap_target->remove_cap( 'edit_posts' );
   $cap_target->remove_cap( 'edit_published_posts' );
+  $cap_target->remove_cap( 'delete_published_posts' );
   $cap_target->remove_cap( 'publish_posts' );
-  $cap_target->remove_cap( 'read' );
   $cap_target->remove_cap( 'upload_files' );
 
   // Contributor
-  $cap_target->remove_cap( 'delete_posts' );
   $cap_target->remove_cap( 'edit_posts' );
-  $cap_target->remove_cap( 'read' );
+  $cap_target->remove_cap( 'delete_posts' );
 
   // Subscriber
   $cap_target->remove_cap( 'read' );
