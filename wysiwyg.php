@@ -1,13 +1,16 @@
 <?php
 
 /**
- * Add some extra buttons to the WYSIWYG
+ * Add extra or remove buttons from the WYSIWYG
+ * https://codex.wordpress.org/Plugin_API/Filter_Reference/mce_buttons,_mce_buttons_2,_mce_buttons_3,_mce_buttons_4
  *
  * mce_buttons - The primary toolbar (always visible)
  * mce_buttons_2 - The advanced toolbar (can be toggled on/off by user)
  * mce_buttons_3 - By default, WordPress does not use/display this toolbar
  * mce_buttons_4 - By default, WordPress does not use/display this toolbar
- */
+*/
+
+// Add buttons
 add_filter( 'mce_buttons_3', function ( $buttons ) {
   $buttons[] = 'fontselect';
   $buttons[] = 'fontsizeselect';
@@ -16,6 +19,13 @@ add_filter( 'mce_buttons_3', function ( $buttons ) {
 
   return $buttons;
 });
+
+// Remove buttons
+add_filter ('mce_buttons_2', function ($buttons) {
+  $remove = array( 'formatselect', 'forecolor');
+
+  return array_diff($buttons, $remove);
+})
 
 
 /**
@@ -34,7 +44,7 @@ add_filter( 'tiny_mce_before_init', function ( $settings ) {
   $settings['paste_remove_spans'] = true;
   $settings['paste_strip_class_attributes'] = 'all';
 
-  // Create your own custom javascript preprocessor parserthat triggers before pasting
+  // Create your own JavaScript preprocessor that triggers before pasting
   $settings['paste_preprocess'] = "function (plugin, args) {
     // Strip all HTML tags except those we have whitelisted
     var whitelist = 'p,span,b,strong,i,em,h3,h4,h5,h6,ul,li,ol';
