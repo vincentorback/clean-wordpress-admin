@@ -27,7 +27,7 @@ Remove specific metaboxes from post-types.
 ### Profile fields
 Remove and add fields on the user profile page. Like contact information or the Biographical Info section.
 
-### User capabilities
+### Capabilities
 Remove and add administrating capabilities to specific roles or users. Like preventing user to switch themes or delete others posts.
 
 ### WYSIWYG
