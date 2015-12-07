@@ -13,6 +13,8 @@ add_action( 'admin_head', function () {
   remove_menu_page( 'upload.php' );
   // Remove Pages
   remove_menu_page( 'edit.php?post_type=page' );
+  // Remove Comments
+  remove_menu_page( 'edit-comments.php' );
   // Remove Appearance
   remove_menu_page( 'themes.php' );
   // Remove Plugins
@@ -24,12 +26,10 @@ add_action( 'admin_head', function () {
   // Remove Settings
   remove_menu_page( 'options-general.php' );
 
-
   // Remove Posts -> Categories
   remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=category' );
   // Remove Posts -> Tags
   remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' );
-
 
   // Remove Appearance -> Themes
   remove_submenu_page( 'themes.php', 'themes.php' );
@@ -39,7 +39,6 @@ add_action( 'admin_head', function () {
   remove_submenu_page( 'themes.php', 'nav-menus.php.php');
   // Remove Appearance -> Editor
   remove_submenu_page( 'themes.php', 'theme-editor.php');
-
 
   // Remove Settings -> Writing
   remove_submenu_page( 'options-general.php', 'options-writing.php' );
