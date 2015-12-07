@@ -6,7 +6,7 @@
 add_action( 'after_setup_theme', function () {
 
   // Still show updates to superadmins
-  if ( ! current_user_can( 'update_core' ) ) {
+  if ( (! current_user_can( 'update_core' )) || is_super_admin() ) {
     return;
   }
 
