@@ -35,6 +35,8 @@ add_action( 'admin_head', function () {
   remove_submenu_page( 'themes.php', 'themes.php' );
   // Remove Appearance -> Customize (if your WordPress folder is located elsewhere, this path must be updated)
   remove_submenu_page( 'themes.php', 'customize.php?return=%2Fwp-admin%2Fthemes.php' );
+  // Remove Appearance -> Widgets
+  remove_submenu_page( 'themes.php', 'widgets.php' );
   // Remove Appearance -> Menus
   remove_submenu_page( 'themes.php', 'nav-menus.php.php');
   // Remove Appearance -> Editor
