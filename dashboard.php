@@ -2,6 +2,7 @@
 
 /**
  * Removing dashboard widgets.
+ * @link https://codex.wordpress.org/Function_Reference/remove_meta_box
  */
 add_action( 'admin_init', function () {
   // Removes the 'incoming links' metabox

@@ -1,7 +1,8 @@
 <?php
 
 /**
- * Remove Help Tab
+ * Add or remove Help Tabs
+ * @link https://codex.wordpress.org/Adding_Contextual_Help_to_Administration_Menus
  *
  * @param $old_help
  * @param $screen_id

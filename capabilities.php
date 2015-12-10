@@ -2,6 +2,8 @@
 
 /**
  * Role and user capabilities
+ * @link https://codex.wordpress.org/Roles_and_Capabilities
+ * 
  * `remove_cap` can be changed to `app_cap`
 */
 

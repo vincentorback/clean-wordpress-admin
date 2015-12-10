@@ -2,7 +2,7 @@
 
 /**
  * Add extra or remove buttons from the WYSIWYG
- * https://codex.wordpress.org/Plugin_API/Filter_Reference/mce_buttons,_mce_buttons_2,_mce_buttons_3,_mce_buttons_4
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/mce_buttons,_mce_buttons_2,_mce_buttons_3,_mce_buttons_4
  *
  * mce_buttons - The primary toolbar (always visible)
  * mce_buttons_2 - The advanced toolbar (can be toggled on/off by user)
@@ -30,7 +30,7 @@ add_filter ('mce_buttons_2', function ($buttons) {
 
 /**
  * Change default TinyMCE WYSIWYG settings.
- * https://codex.wordpress.org/TinyMCE
+ * @link https://codex.wordpress.org/TinyMCE
  *
  * @param $settings Object Array of TinyMCE settings
  */

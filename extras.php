@@ -41,7 +41,9 @@ add_action( 'wp_before_admin_bar_render', function () {
 
 /**
  * Custom avatars.
- * * @param $user_contact Existing avatars
+ * @link https://codex.wordpress.org/How_to_Use_Gravatars_in_WordPress
+ *
+ * @param $user_contact Existing avatars
  */
 add_filter( 'avatar_defaults', function ( $avatar_defaults ) {
   $my_avatar = get_bloginfo( 'template_directory' ) . '/images/my-avatar.gif';
@@ -52,6 +54,7 @@ add_filter( 'avatar_defaults', function ( $avatar_defaults ) {
 
 /**
  * Custom left admin footer text
+ * @link https://developer.wordpress.org/reference/hooks/admin_footer_text/
  */
 add_filter( 'admin_footer_text', function () {
   return '<span id="footer-thankyou">Website by <a href="//vincentorback.se" target="_blank">Vincent Orback</a></span>';

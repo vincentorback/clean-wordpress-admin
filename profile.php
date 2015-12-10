@@ -2,6 +2,7 @@
 
 /**
  * Hide Personal Options settings
+ * @link https://codex.wordpress.org/Plugin_API/Action_Reference/admin_print_scripts
  *
  * Keyboard Short - .user-comment-shortcuts-wrap
  * Admin Color Scheme - .user-admin-color-wrap
@@ -21,6 +22,7 @@ add_action( 'admin_print_scripts-profile.php', function () {
 
 /**
  * Remove default user contact fields
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/user_contactmethods
  *
  * @param $user_contact Existing contact methods
  * @return Array of contact methods

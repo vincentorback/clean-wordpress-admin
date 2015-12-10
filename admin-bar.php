@@ -2,12 +2,15 @@
 
 /**
  * Hide the admin bar on the front-end
+ * @link https://codex.wordpress.org/Function_Reference/show_admin_bar
  */
 add_filter( 'show_admin_bar', '__return_false' );
 
 
 /**
  * Hide or create new menus and items in the admin bar.
+ * @link https://codex.wordpress.org/Class_Reference/WP_Admin_Bar/add_menu
+ * 
  * Indentation shows sub-items.
  */
 add_action( 'admin_bar_menu', function ( $admin_bar ) {
