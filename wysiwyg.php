@@ -20,13 +20,6 @@ add_filter( 'mce_buttons_3', function ( $buttons ) {
   return $buttons;
 });
 
-// Remove buttons
-add_filter ('mce_buttons_2', function ($buttons) {
-  $remove = array( 'formatselect', 'forecolor');
-
-  return array_diff($buttons, $remove);
-})
-
 
 /**
  * Change default TinyMCE WYSIWYG settings.
@@ -43,6 +36,11 @@ add_filter( 'tiny_mce_before_init', function ( $settings ) {
   $settings['paste_remove_styles'] = true;
   $settings['paste_remove_spans'] = true;
   $settings['paste_strip_class_attributes'] = 'all';
+
+  $settings['toolbar1'] = 'formatselect,bold,italic,bullist,numlist,blockquote,hr,alignleft,aligncenter,alignright,link,unlink,underline';
+  $settings['toolbar2'] = '';
+
+  $settings['block_formats'] = "Paragraph=p; Heading 1=h1; Heading 2=h2; Heading 3=h3;";
 
   // Create your own JavaScript preprocessor that triggers before pasting
   $settings['paste_preprocess'] = "function (plugin, args) {
