@@ -30,6 +30,9 @@ Remove and add fields on the user profile page. Like contact information or the 
 ### Capabilities
 Remove and add administrating capabilities to specific roles or users. Like preventing user to switch themes or delete others posts.
 
+### Widgets
+Remove default widgets.
+
 ### WYSIWYG
 Remove and add buttons and change the settings of the TinyMCE WYSIWYG.
 
