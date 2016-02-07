@@ -40,3 +40,18 @@ add_action( 'init', function () {
   // Remove post format
   remove_post_type_support( $post_type, 'post-formats' );
 });
+
+
+/**
+ * Remove post type metaboxes
+ * @link https://codex.wordpress.org/Function_Reference/remove_meta_box
+ */
+add_action( 'admin_menu', function() {
+  $post_type = 'post';
+
+  remove_meta_box('postcustom', $post_type, 'normal');
+  remove_meta_box('commentstatusdiv', $post_type, 'normal');
+  remove_meta_box('commentsdiv', $post_type, 'normal');
+  remove_meta_box('authordiv', $post_type, 'normal');
+  remove_meta_box('tagsdiv-post_tag', $post_type, 'normal');
+});
