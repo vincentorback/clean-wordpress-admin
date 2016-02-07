@@ -51,14 +51,5 @@ if ( ! current_user_can( 'administrator' ) ) {
 ```
 
 
-## TODO
-- [x] Hide/add items in the Admin bar
-- [x] Hide links to WordPress help, documentation, forum etc.
-- [x] Hide/add items to the WYSIWYG
-- [x] Add custom contextual tabs
-- [x] Hide WYSIWYG on specific post types
-- [x] Completely remove the dashboard
-- [x] Remove update notifications regarding core, plugins and themes updates
-- [x] Hide specific meta boxes on different post type pages
-- [x] Add links to WordPress codex in comments or at the top of each file
-- [ ] [Suggest something!?](https://github.com/vincentorback/clean-wordpress-admin/issues)
+## Contribution
+Feel free to [suggest anything](https://github.com/vincentorback/clean-wordpress-admin/issues) you see missing or want fixed!
