@@ -33,11 +33,6 @@ add_filter( 'user_contactmethods', function ( $user_contact ) {
   unset( $user_contact['jabber'] );
   unset( $user_contact['yim'] );
 
-  // Add new
-  $user_contact['phone'] = 'Phone';
-  $user_contact['twitter'] = 'Twitter';
-  $user_contact['facebook'] = 'Facebook';
-
   return $user_contact;
 });
 
