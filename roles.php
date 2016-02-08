@@ -1,9 +1,22 @@
 <?php
 
 /**
- * Role and user capabilities
+ * Remove default roles
+ * @link https://codex.wordpress.org/Function_Reference/remove_role
+ */
+add_action( 'admin_init', function () {
+  remove_role( 'administrator' );
+  remove_role( 'editor' );
+  remove_role( 'author' );
+  remove_role( 'contributor' );
+  remove_role( 'subscriber' );
+});
+
+
+/**
+ * Remove user/role capabilities
  * @link https://codex.wordpress.org/Roles_and_Capabilities
- * 
+ *
  * `remove_cap` can be changed to `app_cap`
 */
 
@@ -11,9 +24,7 @@ add_action( 'admin_init', function () {
 
   // Target (roles or user)
   $cap_target = get_role( 'editor' );
-
-  // $user_id = '???' // The ID of the user to remove the capability from.
-  // $cap_target = new WP_User( $user_id );
+  // $cap_target = new WP_User( ? ); // The ID of the user to remove the capability from.
 
   // Super Admin
   $cap_target->remove_cap( 'manage_network' );
