@@ -28,14 +28,13 @@ Remove specific metaboxes from post-types.
 Remove and add fields on the user profile page. Like contact information or the Biographical Info section.
 
 ### Roles
-Remove default roles.
-Remove and add administrating capabilities to specific roles or users. Like preventing user to switch themes or delete others posts.
+Remove default roles. Remove capabilities to specific roles or users.
 
 ### Widgets
 Remove default widgets.
 
 ### WYSIWYG
-Remove and add buttons and change the settings of the TinyMCE WYSIWYG.
+Change settings and clean up the TinyMCE WYSIWYG.
 
 #### Extras
 A pretty personal collection of good, fun and just necessary functions to make WordPress development easier.
