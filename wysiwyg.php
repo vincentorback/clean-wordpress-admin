@@ -1,27 +1,6 @@
 <?php
 
 /**
- * Add extra or remove buttons from the WYSIWYG
- * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/mce_buttons,_mce_buttons_2,_mce_buttons_3,_mce_buttons_4
- *
- * mce_buttons - The primary toolbar (always visible)
- * mce_buttons_2 - The advanced toolbar (can be toggled on/off by user)
- * mce_buttons_3 - By default, WordPress does not use/display this toolbar
- * mce_buttons_4 - By default, WordPress does not use/display this toolbar
-*/
-
-// Add buttons
-add_filter( 'mce_buttons_3', function ( $buttons ) {
-  $buttons[] = 'fontselect';
-  $buttons[] = 'fontsizeselect';
-  $buttons[] = 'backcolor';
-  $buttons[] = 'hr';
-
-  return $buttons;
-});
-
-
-/**
  * Change default TinyMCE WYSIWYG settings.
  * @link https://codex.wordpress.org/TinyMCE
  *
