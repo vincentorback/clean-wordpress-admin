@@ -21,6 +21,9 @@ Remove dashboard metaboxes or even the whole dashboard itself.
 ### Emojis
 Disable the built in emojis (since 4.2 WordPress) that loads large JavaScript, CSS and image files.
 
+### JavaScript
+De-registers the WordPress stock jQuery script.
+
 ### Notifications
 Remove notifications about core/plugin updates.
 
