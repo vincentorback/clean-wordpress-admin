@@ -18,6 +18,9 @@ Remove all or specific contextual tabs with help and information about how to us
 ### Dashboard
 Remove dashboard metaboxes or even the whole dashboard itself.
 
+### Emojis
+Disable the built in emojis (since 4.2 WordPress) that loads large JavaScript, CSS and image files.
+
 ### Notifications
 Remove notifications about core/plugin updates.
 
