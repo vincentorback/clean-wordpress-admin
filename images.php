@@ -21,3 +21,10 @@ add_action( 'after_setup_theme', function () {
   }
 
 });
+
+/**
+ * Remove WordPress Gallery
+ */
+add_action('admin_enqueue_scripts', function () {
+  wp_deregister_script('admin-gallery');
+});
