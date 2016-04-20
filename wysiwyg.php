@@ -1,5 +1,20 @@
 <?php
 
+
+/**
+ * Set default editor mode to 'html' or 'tinymce'
+ */
+add_filter('wp_default_editor', create_function('', 'return "html";'));
+
+
+
+/**
+ * Remove visual options and tabs
+ */
+add_filter( 'user_can_richedit' , '__return_false', 50 );
+
+
+
 /**
  * Change default TinyMCE WYSIWYG settings.
  * @link https://codex.wordpress.org/TinyMCE
