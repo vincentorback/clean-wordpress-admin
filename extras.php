@@ -64,6 +64,6 @@ add_filter( 'admin_footer_text', function () {
 /**
  * Custom right admin footer text (where the WordPress version nr is)
  */
- add_filter( 'update_footer', function () {
-   return '¯\_(ツ)_/¯';
- }, 999);
+add_filter( 'update_footer', function () {
+ return '¯\_(ツ)_/¯';
+}, 999);

@@ -10,7 +10,7 @@ add_filter( 'show_admin_bar', '__return_false' );
 /**
  * Hide or create new menus and items in the admin bar.
  * @link https://codex.wordpress.org/Class_Reference/WP_Admin_Bar/add_menu
- * 
+ *
  * Indentation shows sub-items.
  */
 add_action( 'admin_bar_menu', function ( $admin_bar ) {
@@ -29,7 +29,6 @@ add_action( 'admin_bar_menu', function ( $admin_bar ) {
   $admin_bar->remove_menu( 'comments' );         // Remove the comments link
   $admin_bar->remove_menu( 'new-content' );      // Remove the content link
   $admin_bar->remove_menu( 'my-account' );       // Remove the user details tab
-
 
   // Add custom menu
   $admin_bar->add_menu( array(
