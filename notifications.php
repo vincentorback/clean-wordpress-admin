@@ -21,3 +21,27 @@ add_action( 'after_setup_theme', function () {
  */
 remove_action( 'load-update-core.php', 'wp_update_plugins' );
 add_filter( 'pre_site_transient_update_plugins', '__return_null' );
+
+
+
+/**
+ * Disable inactive plugins update notifications
+ */
+add_filter('transient_update_plugins', function ($value = '') {
+  if ((isset($value->response)) && (count($value->response))) {
+    $active_plugins = get_option('active_plugins');
+    if ($active_plugins) {
+      foreach($value->response as $plugin_idx => $plugin_item) {
+        if (!in_array($plugin_idx, $active_plugins)) {
+          unset($value->response[$plugin_idx]);
+        }
+      }
+    }
+    else {
+      foreach($value->response as $plugin_idx => $plugin_item) {
+        unset($value->response);
+      }
+    }
+  }
+  return $value;
+});
