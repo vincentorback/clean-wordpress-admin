@@ -12,6 +12,9 @@ Hide items and sub-items in the admin menu. Also known as the Toolbar.
 ### Clean head
 Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
 
+### Comments
+Remove default comment parsing
+
 ### Contextual tabs
 Remove all or specific contextual tabs with help and information about how to use the WordPress interface.
 
