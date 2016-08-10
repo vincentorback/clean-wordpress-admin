@@ -22,9 +22,16 @@ add_action( 'after_setup_theme', function () {
 
 });
 
+
 /**
  * Remove WordPress Gallery
  */
 add_action('admin_enqueue_scripts', function () {
   wp_deregister_script('admin-gallery');
 });
+
+
+/**
+ * Remove srcset on images
+ */
+add_filter( 'wp_calculate_image_srcset', '__return_false' );
