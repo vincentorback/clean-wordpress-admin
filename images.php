@@ -35,3 +35,18 @@ add_action('admin_enqueue_scripts', function () {
  * Remove srcset on images
  */
 add_filter( 'wp_calculate_image_srcset', '__return_false' );
+
+
+/**
+ * Remove image size attributes
+ * @param  String $html
+ */
+function remove_image_sizes( $html ) {
+  return preg_replace( '/(width|height)="\d*"/', '', $html );
+}
+
+// Remove size attributes from thumbnail images
+add_filter( 'post_thumbnail_html', 'remove_image_sizes' );
+
+// Remove size attributes from images in posts
+add_filter( 'image_send_to_editor', 'remove_image_sizes' );
