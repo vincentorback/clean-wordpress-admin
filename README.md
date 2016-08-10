@@ -37,6 +37,9 @@ Remove fields from the user profile page, like contact information or the Biogra
 ### [Roles](roles.php)
 Remove default roles. Remove capabilities to specific roles or users.
 
+### [Theme](theme.php)
+Remove theme features.
+
 ### [Widgets](widgets.php)
 Remove default widgets.
 
