@@ -10,9 +10,6 @@ Hide items and sub-items in the admin menu. Also known as the Toolbar.
 ### [Head](head.php)
 Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
 
-### [Comments](comments.php)
-Remove default comment parsing
-
 ### [Contextual tabs](contextual-tabs.php)
 Remove all or specific contextual tabs with help and information about how to use the WordPress interface.
 
@@ -20,7 +17,7 @@ Remove all or specific contextual tabs with help and information about how to us
 Remove dashboard metaboxes or even the whole dashboard itself.
 
 ### [Emojis](emojis.php)
-Disable the built in emojis (since 4.2 WordPress) that loads large JavaScript, CSS and image files.
+Disable built in emojis (since 4.2 WordPress) that loads large JavaScript, CSS and image files :-1:
 
 ### [JavaScript](javascript.php)
 De-registers the WordPress stock jQuery script.
