@@ -39,15 +39,14 @@ add_filter( 'user_contactmethods', function ( $user_contact ) {
 
 /**
  * Removes the "About Yourself / Biographical Info" field.
- * Looks pretty bad but it’s this or jQuery :/
  *
  * @param $buffer Output buffer
  */
-function remove_plain_bio( $buffer) {
-  $titles = array( '#<h3>About Yourself</h3>#', '#<h3>About the user</h3>#' );
-  $buffer = preg_replace( $titles, '<h3>Password</h3>', $buffer, 1 );
-  $biotable = '#<h3>Password</h3>.+?<table.+?/tr>#s';
-  $buffer = preg_replace( $biotable,'<h3>Password</h3> <table class="form-table">', $buffer, 1 );
+function remove_plain_bio( $buffer ) {
+  $titles = array( '#<h3>' . _x( 'About Yourself' ) . '</h3>#', '#<h3>' . _x( 'About the user' ) . '</h3>#' );
+  $buffer = preg_replace( $titles, '<h3>' . _x( 'Password' ) . '</h3>', $buffer, 1 );
+  $biotable = '#<h3>' . _x( 'Password' ) . '</h3>.+?<table.+?/tr>#s';
+  $buffer = preg_replace( $biotable, '<h3>' . _x( 'Password' ) . '</h3> <table class="form-table">', $buffer, 1 );
   return $buffer;
 }
 
