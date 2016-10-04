@@ -12,12 +12,12 @@ add_action( 'after_setup_theme', function () {
 
   // Remove default alignment
   if ( get_option( 'image_default_align' ) !== 'none' ) {
-    update_option('image_default_align', 'none' );
+    update_option( 'image_default_align', 'none' );
   }
 
   // Set default size
   if ( get_option( 'image_default_size' ) !== 'none' ) {
-    update_option('image_default_size', 'large' );
+    update_option( 'image_default_size', 'large' );
   }
 
 });
@@ -26,8 +26,8 @@ add_action( 'after_setup_theme', function () {
 /**
  * Remove WordPress Gallery
  */
-add_action('admin_enqueue_scripts', function () {
-  wp_deregister_script('admin-gallery');
+add_action( 'admin_enqueue_scripts', function () {
+  wp_deregister_script( 'admin-gallery' );
 });
 
 

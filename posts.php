@@ -49,9 +49,9 @@ add_action( 'init', function () {
 add_action( 'admin_menu', function() {
   $post_type = 'post';
 
-  remove_meta_box('postcustom', $post_type, 'normal');
-  remove_meta_box('commentstatusdiv', $post_type, 'normal');
-  remove_meta_box('commentsdiv', $post_type, 'normal');
-  remove_meta_box('authordiv', $post_type, 'normal');
-  remove_meta_box('tagsdiv-post_tag', $post_type, 'normal');
+  remove_meta_box( 'postcustom', $post_type, 'normal' );
+  remove_meta_box( 'commentstatusdiv', $post_type, 'normal' );
+  remove_meta_box( 'commentsdiv', $post_type, 'normal' );
+  remove_meta_box( 'authordiv', $post_type, 'normal' );
+  remove_meta_box( 'tagsdiv-post_tag', $post_type, 'normal' );
 });

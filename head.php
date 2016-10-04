@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Remove feeds and wordpress-specific content that is generated on
- * the wp_head hook.
+ * Remove feeds and wordpress-specific content that is generated on the wp_head hook.
+ * @link https://codex.wordpress.org/Plugin_API/Action_Reference/wp_head
  */
 add_action( 'init', function () {
   // Remove the Really Simple Discovery service link

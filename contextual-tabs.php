@@ -21,5 +21,6 @@ add_filter( 'contextual_help', function ( $old_help, $screen_id, $screen ) {
 
 /**
  * Remove Screen Options tab
+ * @link https://developer.wordpress.org/reference/hooks/screen_options_show_screen/
  */
 add_filter( 'screen_options_show_screen', '__return_false' );

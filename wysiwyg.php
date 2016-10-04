@@ -3,16 +3,16 @@
 
 /**
  * Set default editor mode to 'html' or 'tinymce'
+ * @link https://developer.wordpress.org/reference/hooks/wp_default_editor/
  */
-add_filter('wp_default_editor', create_function('', 'return "html";'));
-
+add_filter( 'wp_default_editor', create_function( '', 'return "html";' ) );
 
 
 /**
  * Remove visual options and tabs
+ * @link https://developer.wordpress.org/reference/hooks/user_can_richedit/
  */
 add_filter( 'user_can_richedit' , '__return_false', 50 );
-
 
 
 /**
@@ -42,12 +42,14 @@ add_filter( 'tiny_mce_before_init', function ( $settings ) {
     var whitelist = 'p,span,b,strong,i,em,h3,h4,h5,h6,ul,li,ol';
     var stripped = $('<div>' + args.content + '</div>');
     var els = stripped.find('*').not(whitelist);
+
     for (var i = els.length - 1; i >= 0; i--) {
       var e = els[i];
       $(e).replaceWith(e.innerHTML);
     }
     // Strip all class and id attributes
     stripped.find('*').removeAttr('id').removeAttr('class');
+
     // Return the clean HTML
     args.content = stripped.html();
   }";

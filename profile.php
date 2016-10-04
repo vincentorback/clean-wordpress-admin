@@ -39,7 +39,6 @@ add_filter( 'user_contactmethods', function ( $user_contact ) {
 
 /**
  * Removes the "About Yourself / Biographical Info" field.
- *
  * @param $buffer Output buffer
  */
 function remove_plain_bio( $buffer ) {

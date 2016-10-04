@@ -60,7 +60,6 @@ function get_page_depth ( $page ) {
 
 /**
  * Nice debugging replacement to var_dump
- *
  * @param $data Object you want to test.
  */
 function show ( $data ) {
@@ -92,7 +91,6 @@ add_action( 'wp_before_admin_bar_render', function () {
 /**
  * Custom avatars.
  * @link https://codex.wordpress.org/How_to_Use_Gravatars_in_WordPress
- *
  * @param $user_contact Existing avatars
  */
 add_filter( 'avatar_defaults', function ( $avatar_defaults ) {
@@ -113,6 +111,7 @@ add_filter( 'admin_footer_text', function () {
 
 /**
  * Custom right admin footer text (where the WordPress version nr is)
+ * @link https://developer.wordpress.org/reference/hooks/update_footer/
  */
 add_filter( 'update_footer', function () {
  return '¯\_(ツ)_/¯';
