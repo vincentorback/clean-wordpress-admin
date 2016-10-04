@@ -25,6 +25,9 @@ De-registers the WordPress stock jQuery script.
 ### [Notifications](notifications.php)
 Remove notifications about core/plugin updates.
 
+### [Post columns](post-columns.php)
+Remove columns shown on the manage posts screen.
+
 ### [Posts](posts.php)
 Remove specific metaboxes from post-types.
 
