@@ -30,20 +30,4 @@ add_action( 'admin_bar_menu', function ( $admin_bar ) {
   $admin_bar->remove_menu( 'new-content' );      // Remove the content link
   $admin_bar->remove_menu( 'my-account' );       // Remove the user details tab
 
-  // Add custom menu
-  $admin_bar->add_menu( array(
-    'id'    => 'my_bar_menu',
-    'title' => 'My bar menu',
-    'meta'  => array( 'class' => 'my-bar-menu' )
-  ));
-
-  // Add custom menu item
-  $admin_bar->add_node( array(
-    'id'    => 'my_bar_node',
-    'title' => 'My bar node',
-    'parent' => 'my_bar_menu',
-    'href'  => 'http://mysite.com/my-page',
-    'meta'  => array( 'class' => 'my-bar-node' )
-  ));
-
 }, 999); // Needs to have low priority
