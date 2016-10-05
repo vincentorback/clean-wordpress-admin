@@ -4,23 +4,29 @@ A collection of functions to clean up WordPress front and back-end to make it ea
 
 ## Content
 
-### [Admin menu](admin-bar.php)
-Hide items and sub-items in the admin menu. Also known as the Toolbar.
+### [Admin bar](admin-bar.php)
+Hide items and sub-items in the admin bar. Also known as the Toolbar.
 
-### [Head](head.php)
-Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
+### [Admin menu](admin-menu.php)
+Hide items and sub-items in the admin menu.
 
 ### [Contextual tabs](contextual-tabs.php)
 Remove all or specific contextual tabs with help and information about how to use the WordPress interface.
 
 ### [Dashboard](dashboard.php)
-Remove dashboard metaboxes or even the whole dashboard itself.
+Remove dashboard meta boxes or even the whole dashboard itself.
 
 ### [Emojis](emojis.php)
 Disable built in emojis (since 4.2 WordPress) that loads large JavaScript, CSS and image files :-1:
 
+### [Head](head.php)
+Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
+
+### [Images](images.php)
+Remove functions related to images like the gallery, default link, alignment and sizes.
+
 ### [JavaScript](javascript.php)
-De-registers the WordPress stock jQuery script.
+De-registers the WordPress default jQuery script.
 
 ### [Notifications](notifications.php)
 Remove notifications about core/plugin updates.
@@ -29,7 +35,7 @@ Remove notifications about core/plugin updates.
 Remove columns shown on the manage posts screen.
 
 ### [Posts](posts.php)
-Remove specific metaboxes from post-types.
+Remove specific meta boxes from post-types.
 
 ### [Profile](profile.php)
 Remove fields from the user profile page, like contact information or the Biographical Info section.
