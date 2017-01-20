@@ -38,7 +38,8 @@ add_action( 'admin_head', function () {
   // Remove Appearance -> Themes
   remove_submenu_page( 'themes.php', 'themes.php' );
   // Remove Appearance -> Customize (if your WordPress folder is located elsewhere, this path must be updated)
-  remove_submenu_page( 'themes.php', 'customize.php?return=%2Fwp-admin%2Fthemes.php' );
+  remove_submenu_page( 'themes.php', 'customize.php?return=' . urlencode( $_SERVER['REQUEST_URI'] ) );
+  
   // Remove Appearance -> Widgets
   remove_submenu_page( 'themes.php', 'widgets.php' );
   // Remove Appearance -> Menus
