@@ -46,12 +46,54 @@ add_action( 'init', function () {
  * Remove post type metaboxes
  * @link https://codex.wordpress.org/Function_Reference/remove_meta_box
  */
-add_action( 'admin_menu', function() {
-  $post_type = 'post';
+ add_action( 'admin_menu', function() {
+   $post_type = 'post';
 
-  remove_meta_box( 'postcustom', $post_type, 'normal' );
-  remove_meta_box( 'commentstatusdiv', $post_type, 'normal' );
-  remove_meta_box( 'commentsdiv', $post_type, 'normal' );
-  remove_meta_box( 'authordiv', $post_type, 'normal' );
-  remove_meta_box( 'tagsdiv-post_tag', $post_type, 'normal' );
-});
+   /* Auhtor metabox */
+   remove_meta_box( 'authordiv', $post_type );
+
+   /* Categories metabox. */
+   remove_meta_box( 'categorydiv', $post_type );
+
+   /* Comments status metabox (discussion) */
+   remove_meta_box( 'commentstatusdiv', $post_type );
+
+   /* Comments metabox */
+   remove_meta_box( 'commentsdiv', $post_type );
+
+   /* Formats metabox */
+   remove_meta_box( 'formatdiv', $post_type );
+
+   /* Attributes metabox */
+   remove_meta_box( 'pageparentdiv', $post_type );
+
+   /* Custom fields metabox */
+   remove_meta_box( 'postcustom', $post_type );
+
+   /* Excerpt metabox */
+   remove_meta_box( 'postexcerpt', $post_type );
+
+   /* Featured image metabox */
+   remove_meta_box( 'postimagediv', $post_type );
+
+   /* Revisions metabox */
+   remove_meta_box( 'revisionsdiv', $post_type );
+
+   /* Slug metabox */
+   remove_meta_box( 'slugdiv', $post_type );
+
+   /* Date, status, and update/save metabox */
+   remove_meta_box( 'submitdiv', $post_type );
+
+   /* Tags metabox */
+   remove_meta_box( 'tagsdiv-post_tag', $post_type );
+
+   /* Custom taxonomies metabox */
+   remove_meta_box( 'tagsdiv-{$tax-name}', $post_type );
+
+   /* Hierarchical custom taxonomies metabox */
+   remove_meta_box( '{$tax-name}div', $post_type );
+
+   /* Trackbacks metabox */
+   remove_meta_box( 'trackbacksdiv', $post_type );
+ });
