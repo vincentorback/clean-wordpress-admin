@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Set default editor mode to 'html' or 'tinymce'
  * @link https://developer.wordpress.org/reference/hooks/wp_default_editor/

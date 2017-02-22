@@ -36,8 +36,7 @@ add_filter( 'transient_update_plugins', function ( $value = '' ) {
           unset($value->response[$plugin_idx]);
         }
       }
-    }
-    else {
+    } else {
       foreach($value->response as $plugin_idx => $plugin_item) {
         unset($value->response);
       }
