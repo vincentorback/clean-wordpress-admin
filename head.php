@@ -19,4 +19,7 @@ add_action( 'init', function () {
 
   // Remove the displayed XHTML generator
   remove_action( 'wp_head', 'wp_generator' );
+
+  // Remove the REST API link tag
+  remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 });
