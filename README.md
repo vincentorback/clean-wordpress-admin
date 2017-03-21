@@ -40,6 +40,9 @@ Remove specific meta boxes from post-types.
 ### [Profile](profile.php)
 Remove fields from the user profile page, like contact information or the Biographical Info section.
 
+### [REST API](rest-api.php)
+Disable the REST API
+
 ### [Roles](roles.php)
 Remove default roles. Remove capabilities to specific roles or users.
 
