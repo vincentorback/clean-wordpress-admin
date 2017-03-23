@@ -28,7 +28,6 @@ add_action( 'admin_print_scripts-profile.php', function () {
  * @return Array of contact methods
  */
 add_filter( 'user_contactmethods', function ( $user_contact ) {
-  // Remove existing
   unset( $user_contact['aim'] );
   unset( $user_contact['jabber'] );
   unset( $user_contact['yim'] );
@@ -38,7 +37,7 @@ add_filter( 'user_contactmethods', function ( $user_contact ) {
 
 
 /**
- * Removes the "About Yourself / Biographical Info" field.
+ * Remove the "About Yourself / Biographical Info" field.
  * @param $buffer Output buffer
  */
 function remove_plain_bio( $buffer ) {
