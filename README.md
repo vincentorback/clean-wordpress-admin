@@ -46,6 +46,9 @@ Disable the REST API
 ### [Roles](roles.php)
 Remove default roles. Remove capabilities to specific roles or users.
 
+### [Search](search.php)
+Disable search query and search form.
+
 ### [Theme](theme.php)
 Remove theme features.
 
