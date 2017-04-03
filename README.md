@@ -10,6 +10,9 @@ Hide items and sub-items in the admin bar. Also known as the Toolbar.
 ### [Admin menu](admin-menu.php)
 Hide items and sub-items in the admin menu.
 
+### [Comments](comments.php)
+Remove default fields in comment form.
+
 ### [Contextual tabs](contextual-tabs.php)
 Remove all or specific contextual tabs with help and information about how to use the WordPress interface.
 
