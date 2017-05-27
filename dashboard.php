@@ -5,6 +5,9 @@
  * @link https://codex.wordpress.org/Function_Reference/remove_meta_box
  */
 add_action( 'admin_init', function () {
+  // Remove the 'Welcome' panel
+  remove_action('welcome_panel', 'wp_welcome_panel');
+
   // Remove the 'incoming links' metabox
   remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
 
