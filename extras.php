@@ -27,9 +27,9 @@ function is_search_page () {
 
 /**
  * Get pages using a specific template
- * @param $template - Name of template file
+ * @param $template - Name of template file, eg 'template-contact.php'
  */
-function get_pages_with_template( $template ) {
+function get_pages_by_template( $template ) {
   return get_pages(array(
     'meta_key' => '_wp_page_template',
     'meta_value' => $template
