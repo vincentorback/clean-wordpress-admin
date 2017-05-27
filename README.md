@@ -7,6 +7,9 @@ A collection of functions to clean up WordPress front and back-end to make it ea
 ### [Admin bar](admin-bar.php)
 Hide items and sub-items in the admin bar. Also known as the Toolbar.
 
+### [Admin footer](admin-footer.php)
+Hide 'Thank you' text and version number in the admin footer
+
 ### [Admin menu](admin-menu.php)
 Hide items and sub-items in the admin menu.
 
