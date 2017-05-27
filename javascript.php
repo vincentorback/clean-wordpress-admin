@@ -5,8 +5,6 @@
  * @link https://codex.wordpress.org/Function_Reference/wp_deregister_script
  */
 add_action( 'wp_enqueue_scripts', function () {
-  if ( !is_admin() ) {
-     wp_deregister_script( 'jquery' );
-     wp_deregister_script( 'wp-embed' );
-  }
+   wp_deregister_script( 'jquery' );
+   wp_deregister_script( 'wp-embed' );
 });
