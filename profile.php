@@ -8,13 +8,15 @@
  * Admin Color Scheme - .user-admin-color-wrap
  * Visual Editor - .user-rich-editing-wrap
  * Show Toolbar - .show-admin-bar
+ * Biographical Info - .user-description-wrap
  */
 add_action( 'admin_print_scripts-profile.php', function () {
   ?><style>
   .user-rich-editing-wrap,
   .user-comment-shortcuts-wrap,
   .user-admin-color-wrap,
-  .show-admin-bar {
+  .show-admin-bar,
+  .user-description-wrap {
     display: none;
   }</style><?php
 });
@@ -33,25 +35,4 @@ add_filter( 'user_contactmethods', function ( $user_contact ) {
   unset( $user_contact['yim'] );
 
   return $user_contact;
-});
-
-
-/**
- * Remove the "About Yourself / Biographical Info" field.
- * @param $buffer Output buffer
- */
-function remove_plain_bio( $buffer ) {
-  $titles = array( '#<h3>' . _x( 'About Yourself' ) . '</h3>#', '#<h3>' . _x( 'About the user' ) . '</h3>#' );
-  $buffer = preg_replace( $titles, '<h3>' . _x( 'Password' ) . '</h3>', $buffer, 1 );
-  $biotable = '#<h3>' . _x( 'Password' ) . '</h3>.+?<table.+?/tr>#s';
-  $buffer = preg_replace( $biotable, '<h3>' . _x( 'Password' ) . '</h3> <table class="form-table">', $buffer, 1 );
-  return $buffer;
-}
-
-add_action( 'admin_head', function () {
-  ob_start( 'remove_plain_bio' );
-});
-
-add_action( 'admin_footer', function () {
-  ob_end_flush();
 });
