@@ -8,7 +8,7 @@ add_filter( 'wp_default_editor', create_function( '', 'return "html";' ) );
 
 
 /**
- * Remove visual options and tabs
+ * Disable rich/visual editor
  * @link https://developer.wordpress.org/reference/hooks/user_can_richedit/
  */
 add_filter( 'user_can_richedit' , '__return_false', 50 );
