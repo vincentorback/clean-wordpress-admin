@@ -25,6 +25,7 @@ add_action( 'after_setup_theme', function () {
 
 /**
  * Remove srcset on images
+ * @link https://developer.wordpress.org/reference/functions/wp_calculate_image_srcset/
  */
 add_filter( 'wp_calculate_image_srcset', '__return_false' );
 

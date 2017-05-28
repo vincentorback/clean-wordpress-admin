@@ -19,7 +19,6 @@ add_action( 'admin_init', function () {
  *
  * `remove_cap` can be changed to `app_cap`
 */
-
 add_action( 'admin_init', function () {
 
   // Target (roles or user)

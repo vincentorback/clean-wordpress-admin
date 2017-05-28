@@ -25,7 +25,7 @@ add_filter( 'tiny_mce_before_init', function ( $settings ) {
   $settings['gecko_spellcheck'] = true;
   $settings['keep_styles'] = false;
   $settings['accessibility_focus'] = true;
-  $settings['content_css'] = get_template_directory_uri() . '/custom-editor-style.css';
+  $settings['content_css'] = 'path/to/custom-editor-style.css';
   $settings['paste_remove_styles'] = true;
   $settings['paste_remove_spans'] = true;
   $settings['paste_strip_class_attributes'] = 'all';
