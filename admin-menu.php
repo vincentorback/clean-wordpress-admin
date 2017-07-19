@@ -5,7 +5,7 @@
  * Specify link to parent and link to child.
  * @link https://codex.wordpress.org/Function_Reference/remove_menu_page
  */
-add_action( 'admin_head', function () {
+add_action( 'admin_menu', function () {
   // Remove Dashboard
   remove_menu_page( 'index.php' );
 
@@ -86,4 +86,4 @@ add_action( 'admin_head', function () {
   remove_submenu_page( 'options-general.php', 'options-media.php' );
   // Remove Settings -> Permalinks
   remove_submenu_page( 'options-general.php', 'options-permalink.php' );
-});
+}, 999);
