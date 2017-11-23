@@ -67,9 +67,6 @@ Remove default widgets.
 ### [WYSIWYG](wysiwyg.php)
 Change settings and clean up the TinyMCE WYSIWYG.
 
-#### [Extras](extras.php)
-A pretty personal collection of good, fun and just necessary functions to make WordPress development easier.
-
 
 ## Using
 Don’t just include these files in your project. Look at the content, update the options and see what works for you!
