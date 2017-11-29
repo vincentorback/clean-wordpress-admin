@@ -14,7 +14,7 @@ Hide 'Thank you' text and version number in the admin footer
 Hide items and sub-items in the admin menu.
 
 ### [Comments](comments.php)
-Remove default fields in comment form.
+Remove default fields in the comment form.
 
 ### [Contextual tabs](contextual-tabs.php)
 Remove all or specific contextual tabs with help and information about how to use the WordPress interface.
@@ -23,13 +23,13 @@ Remove all or specific contextual tabs with help and information about how to us
 Remove dashboard meta boxes or even the whole dashboard itself.
 
 ### [Emojis](emojis.php)
-Disable built in emojis (since 4.2 WordPress) that loads large JavaScript, CSS and image files :-1:
+Disable built-in emojis (since 4.2 WordPress) that loads large JavaScript, CSS and image files :-1:
 
 ### [Head](head.php)
 Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
 
 ### [Images](images.php)
-Remove functions related to images like the gallery, default link, alignment and sizes.
+Remove functions related to images like the gallery, default link, alignment, and sizes.
 
 ### [JavaScript](javascript.php)
 De-registers the WordPress default jQuery script.
@@ -41,7 +41,7 @@ Remove actions from the media uploader
 Remove notifications about core/plugin updates.
 
 ### [Post columns](post-columns.php)
-Remove columns shown on the manage posts screen.
+Remove columns shown in the manage posts screen.
 
 ### [Posts](posts.php)
 Remove specific meta boxes from post-types.
@@ -70,8 +70,9 @@ Change settings and clean up the TinyMCE WYSIWYG.
 
 ## Using
 Don’t just include these files in your project. Look at the content, update the options and see what works for you!
+The code is not optimized for speed, it’s optimized for readability.
 
- You should probably keep some things visible for you or a super admin. Check the user role like this:
+ You should probably keep some things visible to you or a super admin. Check the user role like this:
 ```php
 if ( ! current_user_can( 'administrator' ) ) {
   // Clean it up!
@@ -80,4 +81,4 @@ if ( ! current_user_can( 'administrator' ) ) {
 
 
 ## Contribution
-Feel free to [suggest anything](https://github.com/vincentorback/clean-wordpress-admin/issues) you see missing or want fixed!
+Feel free to [suggest anything](https://github.com/vincentorback/clean-wordpress-admin/issues) you see missing or want to be fixed!
