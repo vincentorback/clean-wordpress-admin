@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Function_Reference/remove_post_type_support
  */
 add_action( 'init', function () {
-  $post_type = 'page';
+  $post_type = 'page'; // You can change this to 'post' or any custom post type.
 
   // Remove the title
   remove_post_type_support( $post_type, 'title' );
