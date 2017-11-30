@@ -21,7 +21,7 @@ add_action( 'admin_init' , function () {
     return $columns;
   });
 
-  add_filter( 'manage_page_columns', function ( $columns ) {
+  add_filter( 'manage_pages_columns', function ( $columns ) {
     unset(
       $columns['cb'],
       $columns['title'],
