@@ -50,7 +50,7 @@ add_action( 'init', function () {
    $post_type = 'post';
    $context = 'normal';
 
-   /* Auhtor metabox */
+   /* Author metabox */
    remove_meta_box( 'authordiv', $post_type, $context );
 
    /* Categories metabox. */
