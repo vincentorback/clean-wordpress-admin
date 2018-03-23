@@ -23,7 +23,7 @@ Remove all or specific contextual tabs with help and information about how to us
 Remove dashboard meta boxes or even the whole dashboard itself.
 
 ### [Emojis](emojis.php)
-Disable built-in emojis (since 4.2 WordPress) that loads large JavaScript, CSS and image files :-1:
+Disable built-in emojis that loads large JavaScript, CSS and image files :-1:
 
 ### [Head](head.php)
 Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
