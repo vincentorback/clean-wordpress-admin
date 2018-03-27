@@ -1,23 +1,27 @@
 <?php
 
+function hide_updates () {
+  global $wp_version;
+
+  return (object) array(
+    'last_checked' => time(),
+    'version_checked' => $wp_version
+  );
+}
+
+/* Disable core update notifications */
+add_filter('pre_site_transient_update_core', 'hide_updates');
+
+/* Disable plugin update notifications */
+add_filter('pre_site_transient_update_plugins', 'hide_updates');
+
+/* Disable theme update notifications */
+add_filter('pre_site_transient_update_themes', 'hide_updates');
+
+
+
 /**
- * Hide core updates
- */
-add_action( 'after_setup_theme', function () {
-  add_filter( 'pre_option_update_core', '__return_null' );
-  add_filter( 'pre_site_transient_update_core', '__return_null' );
-}, 1 );
-
-
-/**
- * Disable plugin update notifications
- */
-remove_action( 'load-update-core.php', 'wp_update_plugins' );
-add_filter( 'pre_site_transient_update_plugins', '__return_null' );
-
-
-/**
- * Disable inactive plugins update notifications
+ * Disable only inactive plugins update notifications
  */
 add_filter( 'transient_update_plugins', function ( $value = '' ) {
   if ( ( isset( $value->response ) ) && ( count( $value->response ) ) ) {
