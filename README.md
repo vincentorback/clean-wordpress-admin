@@ -68,6 +68,14 @@ Remove default widgets.
 Change settings and clean up the TinyMCE WYSIWYG.
 
 
+## Plugins
+Functions to clean up common plugins.
+
+### [Advanced Custom Fields](plugins/acf.php)
+
+### [Yoast SEO](plugins/yoast-seo.php)
+
+
 ## Using
 Don’t just include these files in your project. Look at the content, update the options and see what works for you!
 The code is not optimized for speed, it’s optimized for readability.
