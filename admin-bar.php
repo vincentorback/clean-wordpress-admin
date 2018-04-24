@@ -28,6 +28,8 @@ add_action( 'wp_before_admin_bar_render', function () {
     $wp_admin_bar->remove_menu( 'dashboard' );        // Remove the dashboard link
     $wp_admin_bar->remove_menu( 'menus' );            // Remove the menus link
 
+  $wp_admin_bar->remove_menu( 'customize' );          // Remove the site name menu
+
   $wp_admin_bar->remove_menu( 'updates' );            // Remove the updates link
   $wp_admin_bar->remove_menu( 'comments' );           // Remove the comments link
   
