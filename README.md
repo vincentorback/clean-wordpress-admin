@@ -61,6 +61,9 @@ Disable search query and search form.
 ### [Theme](theme.php)
 Remove theme features.
 
+### [Updates](updates.php)
+Disable updates and remove notifications.
+
 ### [Widgets](widgets.php)
 Remove default widgets.
 
