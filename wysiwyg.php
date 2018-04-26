@@ -1,17 +1,19 @@
 <?php
 
 /**
- * Set default editor mode to 'html' or 'tinymce'
- * @link https://developer.wordpress.org/reference/hooks/wp_default_editor/
- */
-add_filter( 'wp_default_editor', create_function( '', 'return "html";' ) );
-
-
-/**
  * Disable rich/visual editor
  * @link https://developer.wordpress.org/reference/hooks/user_can_richedit/
  */
 add_filter( 'user_can_richedit' , '__return_false', 50 );
+
+
+/**
+ * Set default editor mode to 'html' or 'tinymce'
+ * @link https://developer.wordpress.org/reference/hooks/wp_default_editor/
+ */
+add_filter( 'wp_default_editor', function () {
+  return 'html';
+});
 
 
 /**
