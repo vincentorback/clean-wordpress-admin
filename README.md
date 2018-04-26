@@ -34,7 +34,7 @@ Remove functions related to images like the gallery, default link, alignment, an
 ### [JavaScript](javascript.php)
 De-registers the WordPress default jQuery script.
 
-### [Media Uploader](media-uploader.php)
+### [Media Upload](media-upload.php)
 Remove actions from the media uploader
 
 ### [Notifications](notifications.php)
