@@ -3,7 +3,7 @@
 /**
  * Remove default fields in comment form
  * @link https://codex.wordpress.org/Function_Reference/comment_form
- */
+*/
 function disable_comment_fields( $fields ) {
   unset( $fields['author'] );
   unset( $fields['email'] );

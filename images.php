@@ -4,7 +4,6 @@
  * Set default image attachment options
  */
 add_action( 'after_setup_theme', function () {
-
   // Remove default link
   if ( get_option( 'image_default_link_type' ) !== 'none' ) {
     update_option( 'image_default_link_type', 'none' );
@@ -19,7 +18,6 @@ add_action( 'after_setup_theme', function () {
   if ( get_option( 'image_default_size' ) !== 'large' ) {
     update_option( 'image_default_size', 'large' );
   }
-
 });
 
 

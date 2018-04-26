@@ -9,9 +9,8 @@ add_filter( 'show_admin_bar', '__return_false' );
 
 /**
  * Hide or create new menus and items in the admin bar.
- * @link https://codex.wordpress.org/Class_Reference/WP_Admin_Bar/add_menu
- *
  * Indentation shows sub-items.
+ * @link https://codex.wordpress.org/Class_Reference/WP_Admin_Bar/add_menu
  */
 add_action( 'wp_before_admin_bar_render', function () {
   global $wp_admin_bar;

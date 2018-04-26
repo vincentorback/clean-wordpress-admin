@@ -2,6 +2,7 @@
 
 /**
  * Remove default roles
+ * WARNING: This will delete the role completetly and you wont get it back unless you reinstall WordPress.
  * @link https://codex.wordpress.org/Function_Reference/remove_role
  */
 add_action( 'admin_init', function () {
