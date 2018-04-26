@@ -20,4 +20,4 @@ add_action( 'parse_query', function ( $query, $error = true ) {
 /**
  * Disable search form
  */
-add_filter( 'get_search_form', create_function( '$a', "return null;" ) );
+add_filter( 'get_search_form', '__return_empty_string' );
