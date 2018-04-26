@@ -37,9 +37,6 @@ De-registers the WordPress default jQuery script.
 ### [Media Upload](media-upload.php)
 Remove actions from the media uploader
 
-### [Notifications](notifications.php)
-Remove notifications about core/plugin updates.
-
 ### [Post columns](post-columns.php)
 Remove columns shown in the manage posts screen.
 
