@@ -1,7 +1,6 @@
 # Clean WordPress Admin
 A collection of functions to clean up WordPress front and back-end to make it easier for editors to work and for you to look at the source code. Hiding content is also a good thing to do to limit the possibilities for your clients to destroy your beautiful site :)
 
-
 ## Content
 
 ### [Admin bar](admin-bar.php)
@@ -24,6 +23,9 @@ Remove dashboard meta boxes or even the whole dashboard itself.
 
 ### [Emojis](emojis.php)
 Disable built-in emojis that loads large JavaScript, CSS and image files :-1:
+
+### [Gutenberg](gutenberg.php)
+Disable the Gutenberg editor.
 
 ### [Head](head.php)
 Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
@@ -67,7 +69,6 @@ Remove default widgets.
 ### [WYSIWYG](wysiwyg.php)
 Change settings and clean up the TinyMCE WYSIWYG.
 
-
 ## Plugins
 Functions to clean up common plugins.
 
@@ -75,10 +76,9 @@ Functions to clean up common plugins.
 
 ### [Yoast SEO](plugins/yoast-seo.php)
 
-
 ## Using
 Don’t just include these files in your project. Look at the content, update the options and see what works for you!
-The code is not optimized for speed, it’s optimized for readability.
+The code is not optimized for speed, it’s optimized for readability. Sometimes the impact on performance makes these functions not eligible.
 
  You should probably keep some things visible to you or a super admin. Check the user role like this:
 ```php
@@ -86,7 +86,6 @@ if ( ! current_user_can( 'administrator' ) ) {
   // Clean it up!
 }
 ```
-
 
 ## Contribution
 Feel free to [suggest anything](https://github.com/vincentorback/clean-wordpress-admin/issues) you see missing or want to be fixed!
