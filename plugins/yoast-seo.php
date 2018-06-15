@@ -15,6 +15,15 @@ if ( isset( $GLOBALS['wpseo_front'] ) && is_a( $GLOBALS['wpseo_front'], 'WPSEO_F
 }
 
 /**
+ * Remove Yoast from admin bar
+ */
+add_action( 'wp_before_admin_bar_render', function () {
+  global $wp_admin_bar;
+
+  $wp_admin_bar->remove_menu( 'wpseo-menu' );
+}, 999);
+
+/**
  * Remove 'primary' categories
  */
 add_filter( 'wpseo_primary_term_taxonomies', '__return_false' );
