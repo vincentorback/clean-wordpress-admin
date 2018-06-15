@@ -8,9 +8,13 @@
 add_action( 'admin_menu', function () {
   // Remove Dashboard
   remove_menu_page( 'index.php' );
+  // Remove Dashboard -> Update Core notice
+  remove_submenu_page( 'index.php', 'update-core.php' );
 
   // Remove Posts
   remove_menu_page( 'edit.php' );
+  // Remove Posts -> New post
+  remove_submenu_page( 'edit.php', 'post-new.php' );
   // Remove Posts -> Categories
   remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=category' );
   // Remove Posts -> Tags
