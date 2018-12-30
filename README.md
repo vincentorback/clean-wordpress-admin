@@ -1,6 +1,18 @@
 # Clean WordPress Admin
 A collection of functions to clean up WordPress front and back-end to make it easier for editors to work and for you to look at the source code. Hiding content is also a good thing to do to limit the possibilities for your clients to destroy your beautiful site :)
 
+**Tested with version: 4.9.5**
+
+## Using
+Don’t just include these files in your project. Look at the content, update the options and see what works for you! The code is not optimized for speed, it’s optimized for readability. Sometimes the impact on performance makes these functions not eligible.
+
+ You should probably keep some things visible to you or a super admin. Check the user role like this:
+```php
+if ( ! current_user_can( 'administrator' ) ) {
+  // Clean it up!
+}
+```
+
 ## Content
 
 ### [Admin bar](admin-bar.php)
@@ -75,17 +87,6 @@ Functions to clean up common plugins.
 ### [Advanced Custom Fields](plugins/acf.php)
 
 ### [Yoast SEO](plugins/yoast-seo.php)
-
-## Using
-Don’t just include these files in your project. Look at the content, update the options and see what works for you!
-The code is not optimized for speed, it’s optimized for readability. Sometimes the impact on performance makes these functions not eligible.
-
- You should probably keep some things visible to you or a super admin. Check the user role like this:
-```php
-if ( ! current_user_can( 'administrator' ) ) {
-  // Clean it up!
-}
-```
 
 ## Contribution
 Feel free to [suggest anything](https://github.com/vincentorback/clean-wordpress-admin/issues) you see missing or want to be fixed!
