@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Disable Gutenberg for all post types
+ * Disable Gutenberg editor for all post types
  */
 
-add_filter('gutenberg_can_edit_post_type', '__return_false');
+add_filter('use_block_editor_for_post', '__return_false');
 
 
 /**
- * Disable Gutenberg for a specific posts, post types, templates, etc.
+ * Disable Gutenberg editor for a specific posts, post types, templates, etc.
  */
 add_filter('use_block_editor_for_post', function ($use_block_editor, $post) {
   // Disable for specific post ID
