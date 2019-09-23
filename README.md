@@ -24,6 +24,9 @@ Hide 'Thank you' text and version number in the admin footer
 ### [Admin menu](admin-menu.php)
 Hide items and sub-items in the admin menu.
 
+### [Classic editor](classic-editor.php)
+Change settings and clean up the classic editor (the one before Gutenberg).
+
 ### [Comments](comments.php)
 Remove default fields in the comment form.
 
@@ -80,9 +83,6 @@ Disable updates and remove notifications.
 
 ### [Widgets](widgets.php)
 Remove default widgets.
-
-### [WYSIWYG](wysiwyg.php)
-Change settings and clean up the TinyMCE WYSIWYG.
 
 ## Plugins
 Functions to clean up common plugins.
