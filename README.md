@@ -36,11 +36,11 @@ Remove all or specific contextual tabs with help and information about how to us
 ### [Dashboard](dashboard.php)
 Remove dashboard meta boxes or even the whole dashboard itself.
 
+### [Editor](editor.php)
+Change editors settings or disable it completly.
+
 ### [Emojis](emojis.php)
 Disable built-in emojis that loads large JavaScript, CSS and image files :-1:
-
-### [Gutenberg](gutenberg.php)
-Disable the Gutenberg editor.
 
 ### [Head](head.php)
 Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
