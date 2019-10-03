@@ -34,7 +34,7 @@ function last_checked_now( $transient ) {
 
 function remove_translations( $transient ) {
   if ( is_object( $transient ) && isset( $transient->translations ) ) {
-    $transient->translations = array(); 
+    $transient->translations = array();
   }
 
   return $transient;

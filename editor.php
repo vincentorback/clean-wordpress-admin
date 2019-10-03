@@ -35,7 +35,7 @@ add_filter('use_block_editor_for_post', function ($use_block_editor, $post) {
  * Enable certain blocks
  */
 add_filter('allowed_block_types', function ($allowed_blocks, $post) {
-	$allowed_blocks = array(
+  $allowed_blocks = array(
 
     // Common
     'core/paragraph',
@@ -123,5 +123,5 @@ add_filter('allowed_block_types', function ($allowed_blocks, $post) {
     );
   }
 
-	return $allowed_blocks;
+  return $allowed_blocks;
 }, 10, 2);
