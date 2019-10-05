@@ -27,3 +27,37 @@ add_action( 'wp_before_admin_bar_render', function () {
  * Remove 'primary' categories
  */
 add_filter( 'wpseo_primary_term_taxonomies', '__return_false' );
+
+/**
+ * Remove post columns
+ */
+add_filter( 'manage_posts_columns', function ( $columns ) {
+  unset(
+    $columns['categories'],
+    $columns['tags'],
+    $columns['comments'],
+
+    $columns['wpseo-score'],
+    $columns['wpseo-title'],
+    $columns['wpseo-metadesc'],
+    $columns['wpseo-focuskw'],
+    $coulmns['wpseo-links']
+  );
+
+  return $columns;
+});
+
+/**
+ * Remove page columns
+ */
+add_filter( 'manage_page_columns', function ( $columns ) {
+  unset(
+    $columns['wpseo-score'],
+    $columns['wpseo-title'],
+    $columns['wpseo-metadesc'],
+    $columns['wpseo-focuskw'],
+    $columns['wpseo-links']
+  );
+
+  return $columns;
+});
