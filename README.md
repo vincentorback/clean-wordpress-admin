@@ -78,6 +78,9 @@ Remove default taxonomies.
 ### [Theme](theme.php)
 Remove theme features.
 
+### [TinyMCE editor](tinymce-editor.php)
+Change settings in the old TinyMCE WYSIWYG editor.
+
 ### [Updates](updates.php)
 Disable updates and remove notifications.
 
