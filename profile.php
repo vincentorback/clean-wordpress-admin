@@ -12,24 +12,18 @@
  * Biographical Info - .user-description-wrap
  */
 
-add_action( 'admin_init', function () {
-  // Profile page
-  add_action( 'admin_print_scripts-profile.php', function () {
-    ?><style>
-    .user-rich-editing-wrap,
-    .user-syntax-highlighting-wrap,
-    .user-admin-color-wrap,
-    .user-comment-shortcuts-wrap,
-    .show-admin-bar,
-    .user-language-wrap,
-    .user-description-wrap {
-      display: none;
-    }</style><?php
-  });
+add_action(
+    'admin_init',
+    function () {
+        add_action('admin_print_scripts-profile.php', 'profile_page_css');
+        add_action('admin_print_scripts-profile.php', 'user_edit_css');
+    }
+);
 
-  // Edit user page
-  add_action( 'admin_print_scripts-user-edit.php', function () {
-    ?><style>
+function profile_page_css()
+{
+    ?>
+    <style>
     .user-rich-editing-wrap,
     .user-syntax-highlighting-wrap,
     .user-admin-color-wrap,
@@ -38,6 +32,23 @@ add_action( 'admin_init', function () {
     .user-language-wrap,
     .user-description-wrap {
       display: none;
-    }</style><?php
-  });
-});
+    }</style>
+    <?php
+}
+
+function user_edit_css()
+{
+    ?>
+        <style>
+        .user-rich-editing-wrap,
+        .user-syntax-highlighting-wrap,
+        .user-admin-color-wrap,
+        .user-comment-shortcuts-wrap,
+        .show-admin-bar,
+        .user-language-wrap,
+        .user-description-wrap {
+          display: none;
+        }</style>
+    <?php
+}
+?>
