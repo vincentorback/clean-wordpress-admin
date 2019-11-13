@@ -125,3 +125,19 @@ add_filter('allowed_block_types', function ($allowed_blocks, $post) {
 
   return $allowed_blocks;
 }, 10, 2);
+
+
+/**
+ * Hide taxonomy metaboxes
+ */
+add_filter('rest_prepare_taxonomy', function ($response, $taxonomy) {
+	if ('post-tag' == $taxonomy->name) {
+		$response->data['visibility']['show_ui'] = false;
+  }
+
+  if ('category' == $taxonomy->name) {
+		$response->data['visibility']['show_ui'] = false;
+  }
+
+	return $response;
+}, 10, 2);
