@@ -7,7 +7,7 @@
     }
   ],
   "scripts": {
-    "test": "./vendor/bin/phpcbf *.php"
+    "test": "./vendor/bin/phpcbf **/*.php"
   },
   "require-dev": {
     "wp-coding-standards/wpcs": "^2.2",
