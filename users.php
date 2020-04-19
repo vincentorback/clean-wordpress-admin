@@ -1,6 +1,16 @@
 <?php
 
 /**
+ * Remove bulk actions from user list
+ */
+add_filter('bulk_actions-users', function ($actions) {
+    unset($actions['delete']);
+
+    return $actions;
+  });
+
+
+/**
  * Hide Personal Options settings
  *
  * Visual Editor - .user-rich-editing-wrap

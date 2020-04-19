@@ -60,9 +60,6 @@ Remove columns shown in the manage posts screen.
 ### [Posts](posts.php)
 Remove specific meta boxes from post-types.
 
-### [Profile](profile.php)
-Remove fields from the user profile page, like contact information or the Biographical Info section.
-
 ### [REST API](rest-api.php)
 Disable the REST API
 
@@ -83,6 +80,9 @@ Change settings in the old TinyMCE WYSIWYG editor.
 
 ### [Updates](updates.php)
 Disable updates and remove notifications.
+
+### [Users](users.php)
+Remove things from user pages.
 
 ### [Widgets](widgets.php)
 Remove default widgets.
