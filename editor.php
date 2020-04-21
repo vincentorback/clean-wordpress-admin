@@ -33,6 +33,21 @@ add_filter(
 );
 
 
+add_action('after_setup_theme', function () {
+    /**
+     * Disable color palette
+     */
+    add_theme_support( 'editor-color-palette' );
+    add_theme_support( 'disable-custom-colors' );
+
+    /**
+     * Disable font sizes
+     */
+    add_theme_support( 'editor-font-sizes', [] );
+    add_theme_support( 'disable-custom-font-sizes' );
+});
+
+
 /**
  * Enable certain blocks
  */
