@@ -7,7 +7,7 @@ add_filter('bulk_actions-users', function ($actions) {
     unset($actions['delete']);
 
     return $actions;
-  });
+});
 
 
 /**

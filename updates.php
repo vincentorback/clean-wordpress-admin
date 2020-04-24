@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Disable update notifcations.
+ * Disable notifications about updates.
  */
 
 // Core update notifications
@@ -22,7 +22,7 @@ add_filter('site_transient_update_plugins', 'remove_translations');
 // Theme translation notifications
 add_filter('site_transient_update_themes', 'remove_translations');
 
-function last_checked_now( $transient )
+function last_checked_now()
 {
     include ABSPATH . WPINC . '/version.php';
     $current = new stdClass;

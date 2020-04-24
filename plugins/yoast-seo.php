@@ -13,7 +13,12 @@ add_filter(
  * Removes Yoast SEO comment in head
  */
 if (isset($GLOBALS['wpseo_front']) && is_a($GLOBALS['wpseo_front'], 'WPSEO_Frontend') ) {
-    remove_action('wpseo_head', array( $GLOBALS['wpseo_front'], 'debug_marker' ), 2);
+    remove_action(
+        'wpseo_head', array(
+            $GLOBALS['wpseo_front'],
+            'debug_marker',
+        ), 2
+    );
 }
 
 /**
