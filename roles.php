@@ -4,7 +4,7 @@
  * Remove default roles
  * WARNING: This will delete the role completetly and you wont get it back unless you reinstall WordPress.
  *
- * @link https://codex.wordpress.org/Function_Reference/remove_role
+ * @link https://developer.wordpress.org/reference/functions/remove_role/
  */
 add_action(
     'admin_init', function () {
@@ -20,9 +20,7 @@ add_action(
 /**
  * Remove user/role capabilities
  *
- * @link https://codex.wordpress.org/Roles_and_Capabilities
- *
- * `remove_cap` can be changed to `app_cap`
+ * @link https://developer.wordpress.org/reference/classes/wp_role/remove_cap/
 */
 add_action(
     'admin_init', function () {

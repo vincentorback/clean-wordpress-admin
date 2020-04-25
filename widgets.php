@@ -3,7 +3,7 @@
 /**
  * Unregister default widgets
  *
- * @link https://codex.wordpress.org/Function_Reference/unregister_widget
+ * @link https://developer.wordpress.org/reference/functions/unregister_widget/
  */
 add_action(
     'widgets_init', function () {

@@ -38,7 +38,7 @@ add_action(
         );
 
         /**
-     * Finally, disable it from the database also, to prevent characters from converting
+         * Finally, disable it from the database also, to prevent characters from converting
          *  There used to be a setting under Writings to do this
          *  Not ideal to get & update it here - but it works :/
          */

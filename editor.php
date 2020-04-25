@@ -2,6 +2,8 @@
 
 /**
  * Disable editor for all post types
+ *
+ * @link https://developer.wordpress.org/reference/hooks/use_block_editor_for_post/
  */
 
 add_filter('use_block_editor_for_post', '__return_false');
@@ -9,6 +11,8 @@ add_filter('use_block_editor_for_post', '__return_false');
 
 /**
  * Disable editor for a specific posts, post types, templates, etc.
+ *
+ * @link https://developer.wordpress.org/reference/hooks/use_block_editor_for_post/
  */
 add_filter(
     'use_block_editor_for_post', function ($use_block_editor, $post) {
@@ -36,12 +40,16 @@ add_filter(
 add_action('after_setup_theme', function () {
     /**
      * Disable color palette
+     *
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/
      */
     add_theme_support( 'editor-color-palette' );
     add_theme_support( 'disable-custom-colors' );
 
     /**
      * Disable font sizes
+     *
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/
      */
     add_theme_support( 'editor-font-sizes', [] );
     add_theme_support( 'disable-custom-font-sizes' );
@@ -50,6 +58,8 @@ add_action('after_setup_theme', function () {
 
 /**
  * Enable certain blocks
+ *
+ * @link https://developer.wordpress.org/reference/hooks/allowed_block_types/
  */
 add_filter(
     'allowed_block_types', function ($allowed_blocks, $post) {
@@ -148,6 +158,8 @@ add_filter(
 
 /**
  * Hide taxonomy metaboxes
+ *
+ * @link https://developer.wordpress.org/reference/hooks/rest_prepare_taxonomy/
  */
 add_filter(
     'rest_prepare_taxonomy', function ($response, $taxonomy) {

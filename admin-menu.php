@@ -4,7 +4,7 @@
  * Hide admin menu items. Can be both parents and children in dropdowns.
  * Specify link to parent and link to child.
  *
- * @link https://codex.wordpress.org/Function_Reference/remove_menu_page
+ * @link https://developer.wordpress.org/reference/functions/remove_menu_page/
  */
 add_action(
     'admin_menu', function () {

@@ -3,7 +3,7 @@
 /**
  * Removing dashboard widgets.
  *
- * @link https://codex.wordpress.org/Function_Reference/remove_meta_box
+ * @link https://developer.wordpress.org/reference/functions/remove_meta_box/
  */
 add_action(
     'admin_init', function () {

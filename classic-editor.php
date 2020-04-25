@@ -23,7 +23,7 @@ add_filter(
 /**
  * Change default TinyMCE WYSIWYG settings.
  *
- * @link https://codex.wordpress.org/TinyMCE
+ * @link https://developer.wordpress.org/reference/hooks/tiny_mce_before_init/
  *
  * @param $settings Object Array of TinyMCE settings
  */

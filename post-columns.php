@@ -3,8 +3,7 @@
 /**
  * Removed post columns
  *
- * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/manage_posts_columns
- * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/manage_pages_columns
+ * @link https://developer.wordpress.org/reference/hooks/manage_posts_columns/
  */
 add_action(
     'admin_init', function () {

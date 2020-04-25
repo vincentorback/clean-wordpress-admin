@@ -3,7 +3,7 @@
 /**
  * Remove post type functions
  *
- * @link https://codex.wordpress.org/Function_Reference/remove_post_type_support
+ * @link https://developer.wordpress.org/reference/functions/remove_post_type_support/
  */
 add_action(
     'init', function () {

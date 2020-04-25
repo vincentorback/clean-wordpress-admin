@@ -3,7 +3,7 @@
 /**
  * Remove theme features
  *
- * @link https://codex.wordpress.org/Function_Reference/remove_theme_support
+ * @link https://developer.wordpress.org/reference/functions/remove_theme_support/
  */
 add_action(
     'after_setup_theme', function () {
@@ -15,5 +15,5 @@ add_action(
         remove_theme_support('html5');
         remove_theme_support('title-tag');
         remove_theme_support('menus');
-    }, 11 
+    }, 11
 );
