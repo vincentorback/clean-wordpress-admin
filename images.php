@@ -2,6 +2,8 @@
 
 /**
  * Set default image attachment options
+ *
+ * @link https://developer.wordpress.org/apis/handbook/options/
  */
 add_action(
     'after_setup_theme', function () {
@@ -32,7 +34,7 @@ add_filter('wp_calculate_image_srcset', '__return_false');
 
 
 /**
- * Remove size attributes
+ * Remove size attributes from images
  *
  * @param String $html
  */

@@ -22,5 +22,7 @@ add_action(
 
 /**
  * Disable search form
+ *
+ * @link https://developer.wordpress.org/reference/hooks/get_search_form/
  */
 add_filter('get_search_form', '__return_empty_string');

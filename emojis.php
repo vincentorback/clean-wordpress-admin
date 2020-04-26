@@ -3,7 +3,7 @@
 /**
  * Remove emoji support
  *
- * @link https://codex.wordpress.org/Emoji
+ * @link https://wordpress.org/support/article/using-smilies/
  */
 
 add_action(
