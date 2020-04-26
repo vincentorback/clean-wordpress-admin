@@ -69,9 +69,6 @@ Remove default roles. Remove capabilities to specific roles or users.
 ### [Search](search.php)
 Disable search query and search form.
 
-### [Taxonomies](taxonomies.php)
-Remove default taxonomies.
-
 ### [Theme](theme.php)
 Remove theme features.
 
