@@ -147,7 +147,7 @@ add_filter(
 
             // Layout Elements
             'core/button',
-            'core/text-columns',
+            'core/columns',
             'core/media-text',
             'core/more',
             'core/nextpage',
