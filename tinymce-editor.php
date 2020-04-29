@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Set default editor mode to 'html' or 'tinymce'
+ * Set default editor mode to 'html', 'tinymce' or 'test'
  *
  * @link https://developer.wordpress.org/reference/hooks/wp_default_editor/
  */
-add_filter('wp_default_editor', create_function('', 'return "html";'));
+add_filter('wp_default_editor', 'html');
 
 
 /**
