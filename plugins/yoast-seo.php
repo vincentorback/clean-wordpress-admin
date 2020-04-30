@@ -35,7 +35,7 @@ add_action(
 /**
  * Remove 'primary' categories
  */
-add_filter('wpseo_primary_term_taxonomies', '__return_false');
+add_filter('wpseo_primary_term_taxonomies', '__return_empty_array');
 
 /**
  * Remove post columns
