@@ -10,6 +10,9 @@ add_action(
         // Remove the 'Welcome' panel
         remove_action('welcome_panel', 'wp_welcome_panel');
 
+        // Remove 'Site health' metabox
+        remove_meta_box('dashboard_site_health', 'dashboard', 'normal');
+
         // Remove the 'At a Glance' metabox
         remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
 
