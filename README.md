@@ -37,7 +37,10 @@ Remove all or specific contextual tabs with help and information about how to us
 Remove dashboard meta boxes or even the whole dashboard itself.
 
 ### [Editor](editor.php)
-Change editors settings or disable it completly.
+Change editors settings, hide metaboxes or disable the editor completely.
+
+### [Editor (JavaScript)](editor.js)
+Change editors settings, hide metaboxes, disable block functions and more.
 
 ### [Emojis](emojis.php)
 Disable built-in emojis that loads large JavaScript, CSS and image files :-1:
