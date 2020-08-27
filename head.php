@@ -30,5 +30,8 @@ add_action(
 
         // Remove rel next/prev links
         remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+
+        // Remove prefetch url
+        remove_action( 'wp_head', 'wp_resource_hints', 2) ;
     }
 );
