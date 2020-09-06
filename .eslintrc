@@ -1,0 +1,10 @@
+{
+	"extends": [
+		"plugin:@wordpress/eslint-plugin/custom",
+		"plugin:@wordpress/eslint-plugin/esnext",
+		"plugin:@wordpress/eslint-plugin/jsdoc"
+	],
+	"env": {
+		"browser": true
+	}
+}

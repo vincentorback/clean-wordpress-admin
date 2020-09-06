@@ -6,9 +6,10 @@
  * @link https://developer.wordpress.org/reference/functions/wp_deregister_script/
  */
 add_action(
-    'wp_enqueue_scripts', function () {
-        wp_deregister_script('jquery');
-    }
+	'wp_enqueue_scripts',
+	function () {
+		wp_deregister_script( 'jquery' );
+	}
 );
 
 /**
@@ -16,4 +17,4 @@ add_action(
  *
  * @link https://developer.wordpress.org/reference/functions/wp_oembed_add_host_js/
  */
-remove_action('wp_head', 'wp_oembed_add_host_js');
+remove_action( 'wp_head', 'wp_oembed_add_host_js' );

@@ -8,13 +8,14 @@
  */
 
 add_filter(
-    'media_view_strings', function ( $strings ) {
-        $strings['createGalleryTitle'] = null; // Remove "Create gallery"-button.
-        $strings['createPlaylistTitle'] = null; // Remove "Create Audio Playlist"-button.
-        $strings['createVideoPlaylistTitle'] = null; // Remove "Create Video Playlist"-button.
-        $strings['insertFromUrlTitle'] = null; // Remove "Insert from URL"-button.
-        $strings['setFeaturedImageTitle'] = null; // Remove "Featured Image"
+	'media_view_strings',
+	function ( $strings ) {
+		$strings['createGalleryTitle']       = null; // Remove "Create gallery"-button.
+		$strings['createPlaylistTitle']      = null; // Remove "Create Audio Playlist"-button.
+		$strings['createVideoPlaylistTitle'] = null; // Remove "Create Video Playlist"-button.
+		$strings['insertFromUrlTitle']       = null; // Remove "Insert from URL"-button.
+		$strings['setFeaturedImageTitle']    = null; // Remove "Featured Image"
 
-        return $strings;
-    }
+		return $strings;
+	}
 );

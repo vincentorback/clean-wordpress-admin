@@ -1,5 +1,6 @@
 {
   "name": "clean-wordpress-admin",
+  "license": "UNLICENSED",
   "author": {
     "name": "Vincent Orback",
     "url": "https://vincentorback.se"
@@ -9,7 +10,7 @@
     "url": "https://github.com/vincentorback/clean-wordpress-admin.git"
   },
   "devDependencies": {
-    "@wordpress/scripts": "*"
+    "@wordpress/scripts": "^12.2.0"
   },
   "scripts": {
     "format:js": "wp-scripts format-js *.js",

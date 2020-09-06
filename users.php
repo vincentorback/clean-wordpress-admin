@@ -3,15 +3,20 @@
 /**
  * Remove bulk actions from user list
  */
-add_filter('bulk_actions-users', function ($actions) {
-    unset($actions['delete']);
+add_filter(
+	'bulk_actions-users',
+	function ( $actions ) {
+		unset( $actions['delete'] );
 
-    return $actions;
-});
+		return $actions;
+	}
+);
 
 
 /**
- * Hide Personal Options settings
+ * Hide profile fields
+ *
+ * @link https://developer.wordpress.org/reference/hooks/admin_print_scripts-hook_suffix/
  *
  * Visual Editor - .user-rich-editing-wrap
  * Syntax Highlighting - .user-syntax-highlighting-wrap
@@ -22,43 +27,38 @@ add_filter('bulk_actions-users', function ($actions) {
  * Biographical Info - .user-description-wrap
  */
 
+function hide_profile_fields_with_css() {
+	?><style>
+	.user-rich-editing-wrap,
+	.user-syntax-highlighting-wrap,
+	.user-comment-shortcuts-wrap,
+	.user-admin-color-wrap,
+	.user-url-wrap {
+	display: none;
+	}</style>
+	<?php
+}
+
+function hide_profile_fields_with_javascript() {
+	$fields = array(
+		'first_name',
+		'last_name',
+		'url',
+		'role',
+	);
+
+	echo '<script>jQuery(document).ready(function(){';
+	foreach ( $fields as $field ) {
+		echo "jQuery('#{$field}').parents('tr').remove();";
+	}
+	echo '})</script>';
+}
+
 add_action(
-    'admin_init',
-    function () {
-        add_action('admin_print_scripts-profile.php', 'profile_page_css');
-        add_action('admin_print_scripts-profile.php', 'user_edit_css');
-    }
+	'admin_init',
+	function () {
+		add_action( 'admin_print_scripts-profile.php', 'hide_profile_fields_with_css' );
+		add_action( 'admin_print_scripts-user-edit.php', 'hide_profile_fields_with_css' );
+		add_action( 'admin_print_scripts-user-new.php', 'hide_profile_fields_with_javascript' );
+	}
 );
-
-function profile_page_css()
-{
-    ?>
-    <style>
-    .user-rich-editing-wrap,
-    .user-syntax-highlighting-wrap,
-    .user-admin-color-wrap,
-    .user-comment-shortcuts-wrap,
-    .show-admin-bar,
-    .user-language-wrap,
-    .user-description-wrap {
-      display: none;
-    }</style>
-    <?php
-}
-
-function user_edit_css()
-{
-    ?>
-        <style>
-        .user-rich-editing-wrap,
-        .user-syntax-highlighting-wrap,
-        .user-admin-color-wrap,
-        .user-comment-shortcuts-wrap,
-        .show-admin-bar,
-        .user-language-wrap,
-        .user-description-wrap {
-          display: none;
-        }</style>
-    <?php
-}
-?>

@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/reference/hooks/wp_default_editor/
  */
-add_filter('wp_default_editor', 'html');
+add_filter( 'wp_default_editor', 'html' );
 
 
 /**
@@ -13,7 +13,7 @@ add_filter('wp_default_editor', 'html');
  *
  * @link https://developer.wordpress.org/reference/hooks/user_can_richedit/
  */
-add_filter('user_can_richedit', '__return_false', 50);
+add_filter( 'user_can_richedit', '__return_false', 50 );
 
 
 /**
@@ -26,11 +26,12 @@ add_filter('user_can_richedit', '__return_false', 50);
  * @param $settings Object Array of TinyMCE settings
  */
 add_filter(
-    'tiny_mce_before_init', function ( $settings ) {
-        $settings['toolbar1'] = 'formatselect,bold,italic,bullist,numlist,link,underline';
-        $settings['toolbar2'] = '';
-        $settings['block_formats'] = 'Paragraph=p; Heading 1=h1; Heading 2=h2; Heading 3=h3;';
+	'tiny_mce_before_init',
+	function ( $settings ) {
+		$settings['toolbar1']      = 'formatselect,bold,italic,bullist,numlist,link,underline';
+		$settings['toolbar2']      = '';
+		$settings['block_formats'] = 'Paragraph=p; Heading 1=h1; Heading 2=h2; Heading 3=h3;';
 
-        return $settings;
-    }
+		return $settings;
+	}
 );
