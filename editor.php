@@ -171,7 +171,7 @@ add_filter(
 add_filter(
 	'rest_prepare_taxonomy',
 	function ( $response, $taxonomy ) {
-		if ( 'post-tag' == $taxonomy->name ) {
+		if ( 'post_tag' == $taxonomy->name ) {
 			$response->data['visibility']['show_ui'] = false;
 		}
 
