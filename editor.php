@@ -42,126 +42,106 @@ add_filter(
 add_action(
 	'after_setup_theme',
 	function () {
-		/**
-		 * Disable color palette
-		 *
-		 * @link https://developer.wordpress.org/reference/functions/add_theme_support/
-		 */
+		// Remove default colors
 		add_theme_support( 'editor-color-palette' );
+
+		// Disable custom colors
 		add_theme_support( 'disable-custom-colors' );
 
-		/**
-		 * Disable font sizes
-		 *
-		 * @link https://developer.wordpress.org/reference/functions/add_theme_support/
-		 */
+		// Remove default font sizes
 		add_theme_support( 'editor-font-sizes', array() );
+
+		// Disable custom font sizes
 		add_theme_support( 'disable-custom-font-sizes' );
 	}
 );
 
 
 /**
- * Enable certain blocks
- *
- * @link https://developer.wordpress.org/reference/hooks/allowed_block_types/
- */
+* Set allowed block types
+*
+* @link https://developer.wordpress.org/reference/hooks/allowed_block_types/
+*/
 add_filter(
 	'allowed_block_types',
 	function ( $allowed_blocks, $post ) {
-		$allowed_blocks = array(
-			// Common
-			'core/paragraph',
-			'core/image',
-			'core/heading',
-			'core/gallery',
-			'core/list',
-			'core/quote',
-			'core/audio',
-			'core/cover', // previously core/cover-image
-			'core/file',
-			'core/video',
 
-			// Formatting
-			'core/table',
-			'core/verse',
-			'core/code',
+		$allowed_blocks = array(
+			'core/button',
+			'core/buttons',
 			'core/freeform',
+			'core/code',
+			'core/column',
+			'core/columns',
+			'core/file',
+			'core/gallery',
+			'core/group',
+			'core/heading',
 			'core/html',
+			'core/image',
+			'core/list',
+			'core/media-text',
+			'core/missing',
+			'core/more',
+			'core/navigation-link',
+			'core/nextpage',
+			'core/paragraph',
 			'core/preformatted',
 			'core/pullquote',
-
-			// Layout Elements
-			'core/button',
-			'core/columns',
-			'core/media-text',
-			'core/more',
-			'core/nextpage',
+			'core/quote',
 			'core/separator',
+			'core/social-links',
 			'core/spacer',
+			'core/subhead',
+			'core/table',
+			'core/text-columns',
+			'core/verse',
+			'core/video',
+			'core/embed',
 
-			// Widgets
-			'core/shortcode',
 			'core/archives',
+			'core/block',
+			'core/calendar',
 			'core/categories',
+			'core/cover',
 			'core/latest-comments',
 			'core/latest-posts',
-			'core/calendar',
+			'core/navigation',
+			'core/navigation-link',
 			'core/rss',
 			'core/search',
+			'core/shortcode',
+			'core/social-link',
 			'core/tag-cloud',
-
-			// Embeds
-			'core/embed',
-			'core-embed/twitter',
-			'core-embed/youtube',
-			'core-embed/facebook',
-			'core-embed/instagram',
-			'core-embed/wordpress',
-			'core-embed/soundcloud',
-			'core-embed/spotify',
-			'core-embed/flickr',
-			'core-embed/vimeo',
-			'core-embed/animoto',
-			'core-embed/cloudup',
-			'core-embed/collegehumor',
-			'core-embed/dailymotion',
-			'core-embed/funnyordie',
-			'core-embed/hulu',
-			'core-embed/imgur',
-			'core-embed/issuu',
-			'core-embed/kickstarter',
-			'core-embed/meetup-com',
-			'core-embed/mixcloud',
-			'core-embed/photobucket',
-			'core-embed/polldaddy',
-			'core-embed/reddit',
-			'core-embed/reverbnation',
-			'core-embed/screencast',
-			'core-embed/scribd',
-			'core-embed/slideshare',
-			'core-embed/smugmug',
-			'core-embed/speaker',
-			'core-embed/ted',
-			'core-embed/tumblr',
-			'core-embed/videopress',
-			'core-embed/wordpress-tv',
+			'core/post-author',
+			'core/post-comment',
+			'core/post-comment-author',
+			'core/post-comment-content',
+			'core/post-comment-date',
+			'core/post-comments',
+			'core/post-comments-count',
+			'core/post-comments-form',
+			'core/post-content',
+			'core/post-date',
+			'core/post-excerpt',
+			'core/post-featured-image',
+			'core/post-hierarchical-terms',
+			'core/post-tags',
+			'core/post-title',
+			'core/query',
+			'core/query-loop',
+			'core/query-pagination',
+			'core/site-logo',
+			'core/site-tagline',
+			'core/site-title',
+			'core/template-part'
 		);
-
-		// Can also be specified by posts
-		if ( $post->post_type === 'post' ) {
-			$allowed_blocks = array(
-				'core/paragraph',
-				'core/heading',
-			);
-		}
 
 		return $allowed_blocks;
 	},
 	10,
 	2
 );
-
 
 /**
  * Hide taxonomy metaboxes
