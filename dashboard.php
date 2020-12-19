@@ -6,7 +6,7 @@
  * @link https://developer.wordpress.org/reference/functions/remove_meta_box/
  */
 add_action(
-	'admin_init',
+	'wp_dashboard_setup',
 	function () {
 		// Remove the 'Welcome' panel
 		remove_action( 'welcome_panel', 'wp_welcome_panel' );
