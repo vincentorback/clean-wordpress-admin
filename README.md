@@ -57,8 +57,8 @@ De-registers the WordPress default jQuery script.
 ### [Media Upload](media-upload.php)
 Remove actions from the media uploader
 
-### [Post columns](post-columns.php)
-Remove columns shown in the manage posts screen.
+### [Content tables](content-tables.php)
+Hide functions from tables with posts, users, plugins and more.
 
 ### [Posts](posts.php)
 Remove specific meta boxes from post-types.

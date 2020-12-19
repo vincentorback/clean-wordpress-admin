@@ -44,3 +44,21 @@ add_action(
 		);
 	}
 );
+
+/**
+ * Remove bulk actions
+ * Change "edit-post" to "edit-<post_type>", "edit-comments", "plugins", "users" or "upload".
+ *
+ * @link
+ */
+add_filter(
+    'bulk_actions-edit-post',
+    function ($actions) {
+        unset(
+            $actions['edit'],
+            $actions['trash']
+        );
+
+        return $actions;
+    }
+);

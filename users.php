@@ -1,19 +1,6 @@
 <?php
 
 /**
- * Remove bulk actions from user list
- */
-add_filter(
-	'bulk_actions-users',
-	function ( $actions ) {
-		unset( $actions['delete'] );
-
-		return $actions;
-	}
-);
-
-
-/**
  * Hide profile fields
  *
  * @link https://developer.wordpress.org/reference/hooks/admin_print_scripts-hook_suffix/
