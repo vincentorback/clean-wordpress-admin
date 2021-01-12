@@ -6,7 +6,9 @@ wp.domReady( function () {
 		.dispatch( 'core/edit-post' )
 		.removeEditorPanel( 'taxonomy-panel-post_tag' );
 
-	wp.data.dispatch( 'core/edit-post' ).removeEditorPanel( 'page-attributes' );
+  wp.data
+    .dispatch( 'core/edit-post' )
+    .removeEditorPanel( 'page-attributes' );
 
 	/**
 	 * Remove rich text formats from rich text blocks.
@@ -48,3 +50,16 @@ wp.hooks.addFilter(
 		return settings;
 	}
 );
+
+/**
+ * Unregister plugins
+ */
+wp.domReady(() => {
+  // You can log the IDs registered plugins to see which you can remove
+  console.log(wp.plugins.getPlugins())
+
+  // Unregister jetpack plugins
+  wp.plugins.unregisterPlugin('jetpack-sidebar')
+  wp.plugins.unregisterPlugin('jetpack-social-previews')
+  wp.plugins.unregisterPlugin('jetpack-likes-and-sharing-panel')
+})

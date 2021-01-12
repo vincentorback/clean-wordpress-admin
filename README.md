@@ -40,7 +40,7 @@ Remove dashboard meta boxes or even the whole dashboard itself.
 Change editors settings, hide metaboxes or disable the editor completely.
 
 ### [Editor (JavaScript)](editor.js)
-Change editors settings, hide metaboxes, disable block functions and more.
+Change editors settings, hide metaboxes, disable block functions, unregister plugins and more.
 
 ### [Emojis](emojis.php)
 Disable built-in emojis that loads large JavaScript, CSS and image files :-1:
