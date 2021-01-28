@@ -35,6 +35,16 @@ add_filter( 'wp_calculate_image_srcset', '__return_false' );
 
 
 /**
+ * Remove lazy loading
+ *
+ * @link https://developer.wordpress.org/reference/hooks/wp_lazy_loading_enabled/
+ */
+add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+add_filter( 'wp_lazy_loading_enabled', '__return_false', 'img' ); // disable only on img elements
+add_filter( 'wp_lazy_loading_enabled', '__return_false', 'iframe' ); // disable only on iframe elements
+
+
+/**
  * Remove size attributes from images
  *
  * @param String $html
