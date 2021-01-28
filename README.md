@@ -54,6 +54,9 @@ Remove functions related to images like the gallery, default link, alignment, an
 ### [JavaScript](javascript.php)
 De-registers the WordPress default jQuery script.
 
+### [Login](login.php)
+Remove functions from the login page.
+
 ### [Media Upload](media-upload.php)
 Remove actions from the media uploader
 
