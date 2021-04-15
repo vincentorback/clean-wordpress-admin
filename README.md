@@ -49,7 +49,7 @@ Disable built-in emojis that loads large JavaScript, CSS and image files :-1:
 Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
 
 ### [Images](images.php)
-Remove functions related to images like the gallery, default link, alignment, and sizes.
+Remove functions related to images like the default link, alignment, and sizes.
 
 ### [JavaScript](javascript.php)
 De-registers the WordPress default jQuery script.
@@ -57,8 +57,8 @@ De-registers the WordPress default jQuery script.
 ### [Login](login.php)
 Remove functions from the login page.
 
-### [Media Upload](media-upload.php)
-Remove actions from the media uploader
+### [Media editor](media-editor.php)
+Remove fields and actions from the media editor.
 
 ### [Content tables](content-tables.php)
 Hide functions from tables with posts, users, plugins and more.
