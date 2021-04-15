@@ -128,43 +128,46 @@ add_action(
  *
  * @link https://gist.github.com/amboutwe/811e92b11e5277977047d44ea81ee9d4#file-yoast_seo_opengraph_remove_presenters-php
  */
-add_filter( 'wpseo_frontend_presenter_classes', function ( $filter ) {
-	$presenter_to_remove = [
-		'Yoast\WP\SEO\Presenters\Meta_Description_Presenter',
-		'Yoast\WP\SEO\Presenters\Robots_Presenter',
-		'Yoast\WP\SEO\Presenters\Canonical_Presenter',
+add_filter(
+	'wpseo_frontend_presenter_classes',
+	function ( $filter ) {
+		$presenter_to_remove = array(
+			'Yoast\WP\SEO\Presenters\Meta_Description_Presenter',
+			'Yoast\WP\SEO\Presenters\Robots_Presenter',
+			'Yoast\WP\SEO\Presenters\Canonical_Presenter',
 
-		// Prev next relations
-		'Yoast\WP\SEO\Presenters\Rel_Prev_Presenter',
-		'Yoast\WP\SEO\Presenters\Rel_Next_Presenter',
+			// Prev next relations
+			'Yoast\WP\SEO\Presenters\Rel_Prev_Presenter',
+			'Yoast\WP\SEO\Presenters\Rel_Next_Presenter',
 
-		// Open Graph
-		'Yoast\WP\SEO\Presenters\Open_Graph\Locale_Presenter',
-		'Yoast\WP\SEO\Presenters\Open_Graph\Type_Presenter',
-		'Yoast\WP\SEO\Presenters\Open_Graph\Title_Presenter',
-		'Yoast\WP\SEO\Presenters\Open_Graph\Description_Presenter',
-		'Yoast\WP\SEO\Presenters\Open_Graph\Url_Presenter',
-		'Yoast\WP\SEO\Presenters\Open_Graph\Site_Name_Presenter',
-		'Yoast\WP\SEO\Presenters\Open_Graph\Article_Publisher_Presenter',
-		'Yoast\WP\SEO\Presenters\Open_Graph\Article_Author_Presenter',
-		'Yoast\WP\SEO\Presenters\Open_Graph\Article_Published_Time_Presenter',
-		'Yoast\WP\SEO\Presenters\Open_Graph\Article_Modified_Time_Presenter',
-		'Yoast\WP\SEO\Presenters\Open_Graph\Image_Presenter',
+			// Open Graph
+			'Yoast\WP\SEO\Presenters\Open_Graph\Locale_Presenter',
+			'Yoast\WP\SEO\Presenters\Open_Graph\Type_Presenter',
+			'Yoast\WP\SEO\Presenters\Open_Graph\Title_Presenter',
+			'Yoast\WP\SEO\Presenters\Open_Graph\Description_Presenter',
+			'Yoast\WP\SEO\Presenters\Open_Graph\Url_Presenter',
+			'Yoast\WP\SEO\Presenters\Open_Graph\Site_Name_Presenter',
+			'Yoast\WP\SEO\Presenters\Open_Graph\Article_Publisher_Presenter',
+			'Yoast\WP\SEO\Presenters\Open_Graph\Article_Author_Presenter',
+			'Yoast\WP\SEO\Presenters\Open_Graph\Article_Published_Time_Presenter',
+			'Yoast\WP\SEO\Presenters\Open_Graph\Article_Modified_Time_Presenter',
+			'Yoast\WP\SEO\Presenters\Open_Graph\Image_Presenter',
 
-		// Twitter
-		'Yoast\WP\SEO\Presenters\Twitter\Card_Presenter',
-		'Yoast\WP\SEO\Presenters\Twitter\Title_Presenter',
-		'Yoast\WP\SEO\Presenters\Twitter\Description_Presenter',
-		'Yoast\WP\SEO\Presenters\Twitter\Image_Presenter',
-		'Yoast\WP\SEO\Presenters\Twitter\Creator_Presenter',
-		'Yoast\WP\SEO\Presenters\Twitter\Site_Presenter',
-	];
+			// Twitter
+			'Yoast\WP\SEO\Presenters\Twitter\Card_Presenter',
+			'Yoast\WP\SEO\Presenters\Twitter\Title_Presenter',
+			'Yoast\WP\SEO\Presenters\Twitter\Description_Presenter',
+			'Yoast\WP\SEO\Presenters\Twitter\Image_Presenter',
+			'Yoast\WP\SEO\Presenters\Twitter\Creator_Presenter',
+			'Yoast\WP\SEO\Presenters\Twitter\Site_Presenter',
+		);
 
-	foreach ($presenter_to_remove as $presenter) {
-		if (($key = array_search($presenter, $filter)) !== false) {
-			unset($filter[$key]);
+		foreach ( $presenter_to_remove as $presenter ) {
+			if ( ( $key = array_search( $presenter, $filter ) ) !== false ) {
+				unset( $filter[ $key ] );
+			}
 		}
-	}
 
-	return $filter;
-});
+		return $filter;
+	}
+);

@@ -104,6 +104,6 @@ add_action(
 		remove_meta_box( '{$tax-name}div', $post_type, $context );
 
 		// Trackbacks metabox
-        remove_meta_box( 'trackbacksdiv', $post_type, $context );
+		remove_meta_box( 'trackbacksdiv', $post_type, $context );
 	}
 );

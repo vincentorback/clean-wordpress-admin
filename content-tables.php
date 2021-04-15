@@ -52,13 +52,13 @@ add_action(
  * @link
  */
 add_filter(
-    'bulk_actions-edit-post',
-    function ($actions) {
-        unset(
-            $actions['edit'],
-            $actions['trash']
-        );
+	'bulk_actions-edit-post',
+	function ( $actions ) {
+			unset(
+				$actions['edit'],
+				$actions['trash']
+			);
 
-        return $actions;
-    }
+			return $actions;
+	}
 );

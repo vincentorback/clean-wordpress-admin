@@ -134,7 +134,7 @@ add_filter(
 			'core/site-logo',
 			'core/site-tagline',
 			'core/site-title',
-			'core/template-part'
+			'core/template-part',
 		);
 
 		return $allowed_blocks;
