@@ -19,3 +19,28 @@ add_filter(
 		return $strings;
 	}
 );
+
+
+/**
+ * Hide input fields when uploading or editing media
+ */
+add_action(
+	'admin_print_scripts',
+	function () {
+		?><style>
+	.attachment-details .setting[data-setting="alt"], /* Alt attribute */
+	.attachment-details #alt-text-description, /* and the description under it */
+
+	.attachment-details .setting[data-setting="caption"], /* Media caption */
+	.attachment-details .setting[data-setting="description"], /* Media description */
+	.attachment-details .setting[data-setting="title"], /* Media title */
+	.attachment-details .setting[data-setting="url"], /* Media url */
+	.attachment-details .setting[data-setting="artist"], /* Audio artist */
+	.attachment-details .setting[data-setting="album"] /* Audio album */
+	{
+		display: none;
+	}
+	</style>
+		<?php
+	}
+);
