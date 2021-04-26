@@ -49,15 +49,17 @@ add_filter( 'wp_lazy_loading_enabled', '__return_false', 'iframe' ); // disable 
  *
  * @param String $html
  */
-function remove_sizes( $html ) {
-	return preg_replace( '/(width|height)="\d*"/', '', $html );
+if ( ! function_exists( 'remove_size_attributes' ) ) {
+	function remove_size_attributes( $html ) {
+		return preg_replace( '/(width|height)="\d*"/', '', $html );
+	}
+
+	// Remove size attributes from thumbnail images
+	add_filter( 'post_thumbnail_html', 'remove_size_attributes' );
+
+	// Remove size attributes in the editor
+	add_filter( 'image_send_to_editor', 'remove_size_attributes' );
+
+	// Remove size attributes from the_content
+	add_filter( 'the_content', 'remove_size_attributes' );
 }
-
-// Remove size attributes from thumbnail images
-add_filter( 'post_thumbnail_html', 'remove_sizes' );
-
-// Remove size attributes in the editor
-add_filter( 'image_send_to_editor', 'remove_sizes' );
-
-// Remove size attributes from the_content
-add_filter( 'the_content', 'remove_sizes' );

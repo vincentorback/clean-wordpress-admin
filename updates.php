@@ -4,40 +4,45 @@
  * Disable notifications about updates.
  */
 
-// Core update notifications
-add_filter( 'pre_site_transient_update_core', 'last_checked_now' );
+if ( ! function_exists( 'set_last_checked_to_now' ) ) {
+	function set_last_checked_to_now() {
+		include ABSPATH . WPINC . '/version.php';
 
-// Plugin update notifications
-add_filter( 'pre_site_transient_update_plugins', 'last_checked_now' );
+		$current = new stdClass();
+		$current->updates = array();
+		$current->version_checked = $wp_version;
+		$current->last_checked = time();
 
-// Theme update notifications
-add_filter( 'pre_site_transient_update_themes', 'last_checked_now' );
-
-// Core translation notifications
-add_filter( 'site_transient_update_core', 'remove_translations' );
-
-// Plugin translation notifications
-add_filter( 'site_transient_update_plugins', 'remove_translations' );
-
-// Theme translation notifications
-add_filter( 'site_transient_update_themes', 'remove_translations' );
-
-function last_checked_now() {
-	include ABSPATH . WPINC . '/version.php';
-	$current                  = new stdClass();
-	$current->updates         = array();
-	$current->version_checked = $wp_version;
-	$current->last_checked    = time();
-
-	return $current;
-}
-
-function remove_translations( $transient ) {
-	if ( is_object( $transient ) && isset( $transient->translations ) ) {
-		$transient->translations = array();
+		return $current;
 	}
 
-	return $transient;
+	// Core update notifications
+	add_filter( 'pre_site_transient_update_core', 'set_last_checked_to_now' );
+
+	// Plugin update notifications
+	add_filter( 'pre_site_transient_update_plugins', 'set_last_checked_to_now' );
+
+	// Theme update notifications
+	add_filter( 'pre_site_transient_update_themes', 'set_last_checked_to_now' );
+}
+
+if ( ! function_exists( 'remove_translation_updates' ) ) {
+	function remove_translation_updates( $transient ) {
+		if ( is_object( $transient ) && isset( $transient->translations ) ) {
+			$transient->translations = array();
+		}
+
+		return $transient;
+	}
+
+	// Core translation notifications
+	add_filter( 'site_transient_update_core', 'remove_translation_updates' );
+
+	// Plugin translation notifications
+	add_filter( 'site_transient_update_plugins', 'remove_translation_updates' );
+
+	// Theme translation notifications
+	add_filter( 'site_transient_update_themes', 'remove_translation_updates' );
 }
 
 
