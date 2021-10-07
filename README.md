@@ -4,11 +4,11 @@ A collection of functions to clean up WordPress front and back-end to make it ea
 **Tested with WordPress 5.7**
 
 ## Using
-Don’t just include these files in your project. Look at the content, update the options and see what works for you! The code is not optimized for speed, it’s optimized for readability. Sometimes the impact on performance makes these functions not eligible.
+Do not just include these files in your project. Look at the content, update the options and see what works for you! The code is not optimized for speed. It is optimized for readability. Sometimes the impact on performance makes these functions not eligible.
 
- You should probably keep some things visible to you or a super admin. Check the user role like this:
+You should probably keep some things visible to you or a super admin. Check the user role like this:
 ```php
-if (!current_user_can('administrator')) {
+if ( ! current_user_can( 'administrator' ) ) {
   // Clean it up!
 }
 ```
@@ -30,6 +30,9 @@ Change settings and clean up the classic editor (the one before Gutenberg).
 ### [Comments](comments.php)
 Remove default fields in the comment form.
 
+### [Content tables](content-tables.php)
+Hide functions from tables with posts, users, plugins and more.
+
 ### [Contextual tabs](contextual-tabs.php)
 Remove all or specific contextual tabs with help and information about how to use the WordPress interface.
 
@@ -37,16 +40,16 @@ Remove all or specific contextual tabs with help and information about how to us
 Remove dashboard meta boxes or even the whole dashboard itself.
 
 ### [Editor](editor.php)
-Change editors settings, hide metaboxes or disable the editor completely.
+Change editor settings, hide meta boxes or disable the editor completely.
 
 ### [Editor (JavaScript)](editor.js)
-Change editors settings, hide metaboxes, disable block functions, unregister plugins and more.
+Change editor settings, hide meta boxes, disable block functions, unregister plugins and more.
 
 ### [Emojis](emojis.php)
 Disable built-in emojis that loads large JavaScript, CSS and image files :-1:
 
 ### [Head](head.php)
-Clears out generated unwanted stuff from the wp_head hook. Such as feeds and WordPress version.
+Clears out generated unwanted stuff from the wp_head hook. Such as feeds and the WordPress version.
 
 ### [Images](images.php)
 Remove functions related to images like the default link, alignment, and sizes.
@@ -59,9 +62,6 @@ Remove functions from the login page.
 
 ### [Media editor](media-editor.php)
 Remove fields and actions from the media editor.
-
-### [Content tables](content-tables.php)
-Hide functions from tables with posts, users, plugins and more.
 
 ### [Posts](posts.php)
 Remove specific meta boxes from post-types.
