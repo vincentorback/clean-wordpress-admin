@@ -51,7 +51,7 @@ add_action(
 		// Remove default font sizes
 		add_theme_support( 'editor-font-sizes', array() );
 
-		// Disable custom font sizes
+		// Disable setting a custom font size
 		add_theme_support( 'disable-custom-font-sizes' );
 	}
 );
