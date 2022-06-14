@@ -105,24 +105,3 @@ add_filter(
 	10,
 	2
 );
-
-
-// Don't log failed logins
-add_filter(
-	'simple_history/simple_logger/log_message_key',
-	function ( $doLog, $loggerSlug, $messageKey, $SimpleLoggerLogLevelsLevel, $context ) {
-		// Don't log login attempts to non existing users
-		if ( 'SimpleUserLogger' == $loggerSlug && 'user_unknown_login_failed' == $messageKey ) {
-			$doLog = false;
-		}
-
-		// Don't log failed logins to existing users
-		if ( 'SimpleUserLogger' == $loggerSlug && 'user_login_failed' == $messageKey ) {
-			$doLog = false;
-		}
-
-		return $doLog;
-	},
-	10,
-	5
-);
