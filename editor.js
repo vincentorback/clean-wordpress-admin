@@ -101,4 +101,21 @@ wp.domReady( function () {
   wp.plugins.unregisterPlugin('jetpack-sidebar')
   wp.plugins.unregisterPlugin('jetpack-social-previews')
   wp.plugins.unregisterPlugin('jetpack-likes-and-sharing-panel')
+
+  // Unregister all embed blocks
+  wp.blocks.getBlockVariations('core/embed').forEach(function (blockVariation) {
+    wp.blocks.unregisterBlockVariation('core/embed', blockVariation.name);
+  });
+
+  // Unregister all embeds but the ones you want
+  const allowedEmbedBlocks = [
+    'vimeo',
+    'youtube',
+  ];
+
+  wp.blocks.getBlockVariations('core/embed').forEach(function (blockVariation) {
+    if (!allowedEmbedBlocks.includes(blockVariation.name)) {
+      wp.blocks.unregisterBlockVariation('core/embed', blockVariation.name);
+    }
+  });
 })
