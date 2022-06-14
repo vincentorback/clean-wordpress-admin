@@ -164,3 +164,14 @@ add_filter(
 	10,
 	2
 );
+
+/**
+ * Disable drop cap
+ * Will likely change in the close future
+ *
+ * @link https://github.com/joppuyo/disable-drop-cap-v2/blob/main/src/DisableDropCap/DisableDropCap.php
+ */
+add_filter('block_editor_settings_all', function ($editor_settings) {
+  $editor_settings['__experimentalFeatures']['typography']['dropCap'] = false;
+  return $editor_settings;
+});
