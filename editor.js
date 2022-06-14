@@ -31,17 +31,34 @@ wp.hooks.addFilter(
     switch ( name ) {
 
       // Paragraph block
-      case 'core/paragraph':
-        settings.supports.color = false // Disable color settings
+      case 'core/paragraph': {
+        // Disable color settings
+        settings.supports.color = false
+
+        // Disable typography settings
+        settings.supports.typography = {
+          ...settings.supports.typography,
+          __experimentalDefaultControls: {
+            fontSize: false
+          },
+          __experimentalFontStyle: false,
+          __experimentalFontWeight: false,
+          __experimentalLetterSpacing: false,
+          __experimentalTextTransform: false,
+          fontSize: false,
+          lineHeight: false,
+        }
         break
+      }
 
       // List block
-      case 'core/list':
+      case 'core/list': {
         settings.supports.color = false // Disable color settings
         break
+      }
 
       // Separator block
-      case 'core/separator':
+      case 'core/separator': {
         if ( settings.styles ) {
           settings.styles = settings.styles.filter( function (
             style
@@ -50,20 +67,23 @@ wp.hooks.addFilter(
           } )
         }
         break
+      }
 
       // Image bock
-      case 'core/image':
+      case 'core/image': {
         if ( settings.styles && Array.isArray( settings.styles ) ) {
           settings.styles = settings.styles.filter( function ( style ) {
             return [ 'rounded' ].indexOf( style.name ) === -1 // Removing styles 'rounded'
           } )
         }
         break
+      }
 
       // Image bock
-      case 'core/file':
+      case 'core/file': {
         settings.attributes.showDownloadButton.default = false // Hide download button from file links
         break
+      }
     }
 
     return settings
