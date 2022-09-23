@@ -13,3 +13,14 @@ add_action(
 		remove_action( 'template_redirect', 'rest_output_link_header', 11 );
 	}
 );
+
+
+/**
+ * Prefix REST API url
+ * Default: "wp-json"
+ * @link https://developer.wordpress.org/reference/hooks/rest_url_prefix/
+ */
+add_filter( 'rest_url_prefix', function () {
+	return 'my_new_api_prefix';
+});
+

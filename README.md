@@ -67,7 +67,7 @@ Remove fields and actions from the media editor.
 Remove specific meta boxes from post-types.
 
 ### [REST API](rest-api.php)
-Disable the REST API
+Hide the url with a custom prefix or disable it completely.
 
 ### [Roles](roles.php)
 Remove default roles. Remove capabilities to specific roles or users.
