@@ -11,12 +11,12 @@ wp.domReady(function () {
   /**
    * Remove rich text formats from rich text blocks.
    */
-  wp.richText.unregisterFormatType('core/bold')
   wp.richText.unregisterFormatType('core/code')
   wp.richText.unregisterFormatType('core/image')
-  wp.richText.unregisterFormatType('core/italic')
+  wp.richText.unregisterFormatType('core/keyboard')
   wp.richText.unregisterFormatType('core/strikethrough')
-  wp.richText.unregisterFormatType('core/underline')
+  wp.richText.unregisterFormatType('core/subscript')
+  wp.richText.unregisterFormatType('core/superscript')
 })
 
 /**
