@@ -24,6 +24,10 @@ Hide 'Thank you' text and version number in the admin footer
 ### [Admin menu](admin-menu.php)
 Hide items and sub-items in the admin menu.
 
+### [Block settings and styles (theme.json)](theme.json)
+Control editor settings, and editor settings for individual blocks.  
+[Read more here](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/)
+
 ### [Classic editor](classic-editor.php)
 Change settings and clean up the classic editor (the one before Gutenberg).
 

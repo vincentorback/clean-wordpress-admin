@@ -1,15 +1,19 @@
 <?php
 
 /**
- * Disable editor for all post types
- *
- * @link https://developer.wordpress.org/reference/hooks/use_block_editor_for_post/
+ * Hey hey! You can disable editor settings like:
+ * drop caps
+ * font sizes
+ * font weights
+ * font styles
+ * colors
+ * spacing
+ * and more in the theme.json-file
+ * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/
  */
 
-add_filter( 'use_block_editor_for_post', '__return_false', 10, 2 );
 
-
-/**
+ /**
  * Disable editor for a specific posts, post types, templates, etc.
  *
  * @link https://developer.wordpress.org/reference/hooks/use_block_editor_for_post/
@@ -17,6 +21,9 @@ add_filter( 'use_block_editor_for_post', '__return_false', 10, 2 );
 add_filter(
 	'use_block_editor_for_post',
 	function ( $use_block_editor, $post ) {
+		// Disable for all post types
+		return false;
+
 		// Disable for specific post ID
 		if ( $post->ID === 123 ) {
 			return false;
@@ -39,6 +46,12 @@ add_filter(
 	2
 );
 
+
+/**
+ * Change editor settings
+ * @deprecated These should be set in theme.json from now on
+ * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/#backward-compatibility-with-add_theme_support
+ */
 add_action(
 	'after_setup_theme',
 	function () {
@@ -60,14 +73,13 @@ add_action(
 /**
 * Set allowed block types
 *
-* @link https://developer.wordpress.org/reference/hooks/allowed_block_types/
+* @link https://developer.wordpress.org/reference/hooks/allowed_block_types_all/
+* @link https://developer.wordpress.org/block-editor/reference-guides/core-blocks/
 */
-add_filter(
-	'allowed_block_types',
-	function ( $allowed_blocks, $post ) {
-
-		$allowed_blocks = array(
-			'core/button',
+add_filter( 'allowed_block_types_all', function ( $block_editor_context, $editor_context ) {
+	if ( ! empty( $editor_context->post ) ) {
+    return array(
+      'core/button',
 			'core/buttons',
 			'core/freeform',
 			'core/code',
@@ -135,13 +147,12 @@ add_filter(
 			'core/site-tagline',
 			'core/site-title',
 			'core/template-part',
-		);
+    );
+  }
 
-		return $allowed_blocks;
-	},
-	10,
-	2
-);
+  return $block_editor_context;
+}, 10, 2 );
+
 
 /**
  * Hide taxonomy metaboxes
@@ -164,14 +175,3 @@ add_filter(
 	10,
 	2
 );
-
-/**
- * Disable drop cap
- * Will likely change in the close future
- *
- * @link https://github.com/joppuyo/disable-drop-cap-v2/blob/main/src/DisableDropCap/DisableDropCap.php
- */
-add_filter('block_editor_settings_all', function ($editor_settings) {
-  $editor_settings['__experimentalFeatures']['typography']['dropCap'] = false;
-  return $editor_settings;
-});
