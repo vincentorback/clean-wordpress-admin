@@ -92,6 +92,7 @@ add_filter( 'allowed_block_types_all', function ( $block_editor_context, $editor
 			'core/html',
 			'core/image',
 			'core/list',
+			'core/list-item',
 			'core/media-text',
 			'core/missing',
 			'core/more',
