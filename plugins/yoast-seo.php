@@ -32,23 +32,6 @@ add_action(
 
 
 /**
- * Removes Yoast SEO comment in head
- * Example: <!-- This site is optimized with the Yoast SEO plugin v14.0.0 - https://yoast.com/wordpress/plugins/seo/ -->
- */
-if ( isset( $GLOBALS['wpseo_front'] ) && is_a( $GLOBALS['wpseo_front'], 'WPSEO_Frontend' ) ) {
-	remove_action(
-		'wpseo_head',
-		array(
-			$GLOBALS['wpseo_front'],
-			'debug_marker',
-		),
-		2
-	);
-}
-
-
-
-/**
  * Remove Yoast settings from admin bar
  */
 add_action(
