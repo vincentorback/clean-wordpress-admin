@@ -1,15 +1,16 @@
 <?php
 
 /**
- * De-registers WordPress default javascript
+ * De-registers WordPress default
  *
- * @link https://developer.wordpress.org/reference/functions/wp_deregister_script/
+ * @link https://developer.wordpress.org/reference/functions/wp_dequeue_style/
  */
 add_action(
-	'wp_enqueue_scripts',
-	function () {
-		wp_deregister_script( 'jquery' );
-	}
+  'wp_enqueue_scripts',
+  function () {
+    wp_dequeue_style('wp-block-library'); // Wordpress block libaray styles
+    wp_dequeue_style('global-styles');// Wordpress global styles generated from theme.json
+  }
 );
 
 /**

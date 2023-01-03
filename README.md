@@ -24,6 +24,9 @@ Hide 'Thank you' text and version number in the admin footer
 ### [Admin menu](admin-menu.php)
 Hide items and sub-items in the admin menu.
 
+### [Assets](assets.php)
+Remove some default loaded CSS and Javascript.
+
 ### [Block settings and styles (theme.json)](theme.json)
 Control editor settings, and editor settings for individual blocks.  
 [Read more here](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/)
@@ -57,9 +60,6 @@ Clears out generated unwanted stuff from the wp_head hook. Such as feeds and the
 
 ### [Images](images.php)
 Remove functions related to images like the default link, alignment, and sizes.
-
-### [JavaScript](javascript.php)
-De-registers the WordPress default jQuery script.
 
 ### [Login](login.php)
 Remove functions from the login page.
