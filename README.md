@@ -64,8 +64,8 @@ Remove functions related to images like the default link, alignment, and sizes.
 ### [Login](login.php)
 Remove functions from the login page.
 
-### [Media editor](media-editor.php)
-Remove fields and actions from the media editor.
+### [Media](media.php)
+Remove fields and actions from the media editor and set allowed file types.
 
 ### [Posts](posts.php)
 Remove specific meta boxes from post-types.
