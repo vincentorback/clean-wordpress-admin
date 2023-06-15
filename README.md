@@ -43,6 +43,9 @@ Hide functions from tables with posts, users, plugins and more.
 ### [Contextual tabs](contextual-tabs.php)
 Remove all or specific contextual tabs with help and information about how to use the WordPress interface.
 
+### [Customizer](customizer.php)
+Remove and disable the theme customizer.
+
 ### [Dashboard](dashboard.php)
 Remove dashboard meta boxes or even the whole dashboard itself.
 
