@@ -1,5 +1,43 @@
 <?php
 
+
+
+/**
+ * Remove image sizes (and create new ones)
+ *
+ * @link https://developer.wordpress.org/reference/functions/remove_image_size/
+ */
+add_action('after_setup_theme', function () {
+	remove_image_size( '1536x1536' );
+  remove_image_size( '2048x2048' );
+
+  add_image_size('tiny', 150, 150, 1);
+});
+
+
+
+/**
+ * Set which image sizes are used in srcset
+ *
+ * @link https://developer.wordpress.org/reference/hooks/wp_calculate_image_srcset/
+ */
+add_filter('wp_calculate_image_srcset', function($sources, $size_array, $image_src, $image_meta, $attachment_id) {
+  unset($sources[150]);
+
+  return $sources;
+}, 10, 5);
+
+
+
+/**
+ * Remove srcset on images
+ *
+ * @link https://developer.wordpress.org/reference/functions/wp_calculate_image_srcset/
+ */
+add_filter( 'wp_calculate_image_srcset', '__return_false' );
+
+
+
 /**
  * Set default image attachment options
  *
@@ -26,13 +64,6 @@ add_action(
 );
 
 
-/**
- * Remove srcset on images
- *
- * @link https://developer.wordpress.org/reference/functions/wp_calculate_image_srcset/
- */
-add_filter( 'wp_calculate_image_srcset', '__return_false' );
-
 
 /**
  * Remove lazy loading
@@ -44,8 +75,9 @@ add_filter( 'wp_lazy_loading_enabled', '__return_false', 'img' ); // disable onl
 add_filter( 'wp_lazy_loading_enabled', '__return_false', 'iframe' ); // disable only on iframe elements
 
 
+
 /**
- * Remove size attributes from images
+ * Remove size attributes on images
  *
  * @param String $html
  */
