@@ -154,3 +154,22 @@ add_filter(
 		return $filter;
 	}
 );
+
+
+
+/**
+ * Remove breadcrumbs from schema
+ */
+add_filter( 'wpseo_schema_graph_pieces', function ($pieces, $context) {
+  return \array_filter( $pieces, function( $piece ) {
+    return ! $piece instanceof \Yoast\WP\SEO\Generators\Schema\Breadcrumb;
+  });
+}, 11, 2 );
+
+add_filter( 'wpseo_schema_webpage', function ($data) {
+  if (array_key_exists('breadcrumb', $data)) {
+    unset($data['breadcrumb']);
+  }
+
+  return $data;
+}, 11, 1 );
