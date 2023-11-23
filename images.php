@@ -10,8 +10,6 @@
 add_action('after_setup_theme', function () {
 	remove_image_size( '1536x1536' );
   remove_image_size( '2048x2048' );
-
-  add_image_size('tiny', 150, 150, 1);
 });
 
 
@@ -22,7 +20,7 @@ add_action('after_setup_theme', function () {
  * @link https://developer.wordpress.org/reference/hooks/wp_calculate_image_srcset/
  */
 add_filter('wp_calculate_image_srcset', function($sources, $size_array, $image_src, $image_meta, $attachment_id) {
-  unset($sources[150]);
+  unset($sources[1024]);
 
   return $sources;
 }, 10, 5);
