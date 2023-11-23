@@ -55,6 +55,9 @@ Change editor settings, hide meta boxes or disable the editor completely.
 ### [Editor (JavaScript)](editor.js)
 Change editor settings, hide meta boxes, disable block functions, unregister plugins and more.
 
+### [Email](email.php)
+Disable email functions.
+
 ### [Emojis](emojis.php)
 Disable built-in emojis that loads large JavaScript, CSS and image files :-1:
 
