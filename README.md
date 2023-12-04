@@ -27,9 +27,9 @@ Hide items and sub-items in the admin menu.
 ### [Assets](assets.php)
 Remove some default loaded CSS and Javascript.
 
-### [Block settings and styles (theme.json)](theme.json)
-Control editor settings, and editor settings for individual blocks.  
-[Read more here](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/)
+### [Block settings and styles (theme.json)]()
+Control editor settings, and settings for individual blocks.  
+[Read more here](https://developer.wordpress.org/themes/global-settings-and-styles/)
 
 ### [Classic editor](classic-editor.php)
 Change settings and clean up the classic editor (the one before Gutenberg).

@@ -1,7 +1,6 @@
 {
     "version": 2,
     "settings": {
-        "appearanceTools": false,
         "border": {
             "color": false,
             "radius": false,
@@ -15,17 +14,14 @@
             "customGradient": false,
             "defaultGradients": false,
             "defaultPalette": false,
-            "duotone": [],
+            "duotone": null,
             "gradients": [],
             "link": false,
             "palette": [],
             "text": false
         },
         "spacing": {
-            "blockGap": null,
-            "margin": false,
-            "padding": false,
-            "units": []
+            "customSpacingSize": false
         },
         "typography": {
             "customFontSize": false,
@@ -35,12 +31,21 @@
             "fontStyle": false,
             "fontWeight": false,
             "letterSpacing": false,
-            "lineHeight": false,
             "textDecoration": false,
             "textTransform": false
         },
         "blocks": {
             "core/heading": {},
+            "blocks": {
+                "core/button": {
+                    "border": {
+                        "radius": false
+                    },
+                    "layout": {
+                        "width": false
+                    }
+                }
+            },
             "core/paragraph": {
                 "border": {},
                 "color": {},
