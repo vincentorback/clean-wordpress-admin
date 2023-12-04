@@ -1,9 +1,13 @@
 <?php
 
+
+
 /**
  * Hide ACF settings menu
  */
 add_filter( 'acf/settings/show_admin', '__return_false' );
+
+
 
 /**
  * Remove ACF from admin menu
@@ -27,4 +31,19 @@ add_action(
 		remove_menu_page( 'acf-options-name-of-page' );
 	},
 	999
+);
+
+
+
+/**
+ * Remove toolbar items from wysiwyg-field
+ */
+add_filter(
+	'acf/fields/wysiwyg/toolbars',
+	function( $toolbars ) {
+		$toolbars['Basic'] = array();
+		$toolbars['Basic'][1] = array('link,removeformat');
+
+		return $toolbars;
+	}
 );
