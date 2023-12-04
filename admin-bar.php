@@ -1,11 +1,14 @@
 <?php
 
+
+
 /**
  * Hide the admin bar on the front-end
  *
  * @link https://developer.wordpress.org/reference/hooks/show_admin_bar
  */
 add_filter( 'show_admin_bar', '__return_false' );
+
 
 
 /**
@@ -48,4 +51,24 @@ add_action(
 		$wp_admin_bar->remove_menu( 'search' );             // Remove the search tab
 	},
 	999
+);
+
+
+
+/**
+ * Replace "Howdy, "-title and avatar with only users display_name
+ *
+ * @link https://developer.wordpress.org/reference/hooks/admin_bar_menu/
+ */
+add_filter(
+  'admin_bar_menu',
+  function ( $admin_bar ) {
+    $title = wp_get_current_user()->display_name;
+
+    $admin_bar->add_node( array(
+      'id' => 'my-account',
+      'title' => $title,
+    ));
+  },
+  25
 );
