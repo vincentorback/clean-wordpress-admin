@@ -1,14 +1,8 @@
 <?php
 
+
+
 /**
- * Hey hey! You can disable editor settings like:
- * drop caps, font sizes, font weights, font styles, colors, spacing
- * and more in the theme.json-file
- * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/
- */
-
-
- /**
  * Disable editor for a specific posts, post types, templates, etc.
  *
  * @link https://developer.wordpress.org/reference/hooks/use_block_editor_for_post/
@@ -69,6 +63,7 @@ add_action(
     add_theme_support( 'disable-custom-gradients' );
   }
 );
+
 
 
 /**
@@ -156,6 +151,7 @@ add_filter( 'allowed_block_types_all', function ( $block_editor_context, $editor
 }, 10, 2 );
 
 
+
 /**
  * Remove bult in block patterns
  */
@@ -166,6 +162,7 @@ add_action(
   },
   11
 );
+
 
 
 /**
@@ -189,3 +186,34 @@ add_filter(
   10,
   2
 );
+
+
+
+/**
+ * Remove default theme json settings.
+ * Even if these are removed in you theme.json-file, they will still be used by the inline styles "global-styles" because they could be used by blocks, plugins etc.
+ *
+ * @link https://developer.wordpress.org/reference/hooks/wp_theme_json_data_default/
+ */
+add_filter( 'wp_theme_json_data_default', function ($theme_json) {
+	$new_data = array(
+		'version' => 2,
+		'settings' => array(
+			'color' => array(
+				'palette' => [],
+				'gradients' => [],
+				'duotone' => [],
+			),
+      'shadow' => [],
+      'typography' => array(
+        'fontSizes' => [],
+        'fontFamilies' => [],
+        'fontWeights' => [],
+        'lineHeights' => [],
+        'letterSpacings' => [],
+      ),
+		),
+	);
+
+	return $theme_json->update_with( $new_data );
+});
