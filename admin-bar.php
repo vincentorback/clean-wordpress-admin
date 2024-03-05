@@ -41,11 +41,11 @@ add_action(
 		/* Customize menu */
 		$wp_admin_bar->remove_menu( 'customize' );      // Remove the site name menu
 
-		// Updates menu */
+		/* Updates menu */
 		$wp_admin_bar->remove_menu( 'updates' );        // Remove the updates link
 		$wp_admin_bar->remove_menu( 'comments' );       // Remove the comments link
 
-		// New content menu */
+		/* New content menu */
 		$wp_admin_bar->remove_menu( 'new-content' );    // Remove the content link
 		$wp_admin_bar->remove_menu( 'new-post' );       // Remove the new post link
 		$wp_admin_bar->remove_menu( 'new-media' );      // Remove the new media link
