@@ -2,11 +2,8 @@ wp.domReady(function () {
   /**
    * Remove editor panels
    */
-  wp.data
-    .dispatch('core/edit-post')
-    .removeEditorPanel('taxonomy-panel-post_tag')
-
-  wp.data.dispatch('core/edit-post').removeEditorPanel('page-attributes')
+  wp.data.dispatch('core/editor').removeEditorPanel('taxonomy-panel-post_tag')
+  wp.data.dispatch('core/editor').removeEditorPanel('page-attributes')
 
   /**
    * Remove rich text formats from rich text blocks.
@@ -29,7 +26,7 @@ wp.domReady(function () {
  */
 wp.hooks.addFilter(
   'blocks.registerBlockType',
-  'your_namespace/editor',
+  'YOUR_NAMESPACE/editor',
   function (settings, name) {
     switch (name) {
       // Image bock
