@@ -173,3 +173,11 @@ add_filter( 'wpseo_schema_webpage', function ($data) {
 
   return $data;
 }, 11, 1 );
+
+
+
+/**
+ * Remove wordpress author from meta and schema
+ */
+
+ add_filter('wpseo_meta_author', '__return_false');
