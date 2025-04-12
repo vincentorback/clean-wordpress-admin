@@ -58,3 +58,79 @@ add_action(
 		remove_action( 'template_redirect', 'rest_output_link_header', 11 );
 	}
 );
+
+
+
+
+
+/**
+ * Remove REST API endpoints for non-logged in users
+ */
+add_filter(
+	'rest_authentication_errors',
+	function ( $result ) {
+		if (
+		! empty( $result ) ||
+		is_admin_request() ||
+		is_customize_preview()
+		) {
+			return $result;
+		}
+
+		wp_send_json_error(
+			array(
+				'code'    => 'rest_not_logged_in',
+				'message' => 'Sorry, you must be logged in to access this API.',
+				'data'    => array(
+					'status' => 401,
+				),
+			),
+			401
+		);
+	}
+);
+
+function is_admin_request() {
+	/**
+	 * Get current URL.
+	 *
+	 * @link https://wordpress.stackexchange.com/a/126534
+	 */
+	$current_url = home_url( add_query_arg( null, null ) );
+
+	/**
+	 * Get admin URL and referrer.
+	 *
+	 * @link https://core.trac.wordpress.org/browser/tags/4.8/src/wp-includes/pluggable.php#L1076
+	 */
+	$admin_url = strtolower( admin_url() );
+	$referrer  = strtolower( wp_get_referer() );
+
+	// $requestFromBackend = is_rest() && strpos($admin_url, '/wp-admin/') > 0 && !strpos($admin_url, '/wp-admin/admin-ajax.php');
+
+	// if ($requestFromBackend) {
+	// return true;
+	// }
+
+	/**
+	 * Check if this is a admin request. If true, it
+	 * could also be a AJAX request from the frontend.
+	 */
+	if ( 0 === strpos( $current_url, $admin_url ) ) {
+		/**
+		 * Check if the user comes from a admin page.
+		 */
+		if ( 0 === strpos( $referrer, $admin_url ) ) {
+			return true;
+		} else {
+			/**
+			 * Check for AJAX requests.
+			 *
+			 * @link https://gist.github.com/zitrusblau/58124d4b2c56d06b070573a99f33b9ed#file-lazy-load-responsive-images-php-L193
+			 */
+			return ! wp_doing_ajax();
+		}
+	} else {
+		return false;
+	}
+}
