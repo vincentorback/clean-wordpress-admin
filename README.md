@@ -61,6 +61,9 @@ Disable email functions.
 ### [Emojis](emojis.php)
 Disable built-in emojis that loads large JavaScript, CSS and image files :-1:
 
+### [Feed](feed.php)
+Disable RSS and other feeds.
+
 ### [Head](head.php)
 Clears out generated unwanted stuff from the wp_head hook. Such as feeds and the WordPress version.
 
