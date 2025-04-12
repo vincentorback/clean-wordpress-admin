@@ -24,7 +24,7 @@ add_action(
 		remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 
 		// Since WP 6.4.0
-		remove_action('enqueue_scripts', 'wp_enqueue_emoji_styles');
+		remove_action( 'enqueue_scripts', 'wp_enqueue_emoji_styles' );
 
 		// Disable from TinyMCE editor. Disabled in block editor by default
 		add_filter(
@@ -48,6 +48,6 @@ add_action(
 		remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 		// Since WP 6.4.0
-		remove_action('enqueue_scripts', 'wp_enqueue_emoji_styles');
+		remove_action( 'enqueue_scripts', 'wp_enqueue_emoji_styles' );
 	}
 );

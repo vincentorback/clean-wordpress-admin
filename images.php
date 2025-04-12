@@ -7,10 +7,13 @@
  *
  * @link https://developer.wordpress.org/reference/functions/remove_image_size/
  */
-add_action('after_setup_theme', function () {
-	remove_image_size( '1536x1536' );
-  remove_image_size( '2048x2048' );
-});
+add_action(
+	'after_setup_theme',
+	function () {
+		remove_image_size( '1536x1536' );
+		remove_image_size( '2048x2048' );
+	}
+);
 
 
 
@@ -19,11 +22,16 @@ add_action('after_setup_theme', function () {
  *
  * @link https://developer.wordpress.org/reference/hooks/wp_calculate_image_srcset/
  */
-add_filter('wp_calculate_image_srcset', function($sources, $size_array, $image_src, $image_meta, $attachment_id) {
-  unset($sources[1024]);
+add_filter(
+	'wp_calculate_image_srcset',
+	function ( $sources, $size_array, $image_src, $image_meta, $attachment_id ) {
+		unset( $sources[1024] );
 
-  return $sources;
-}, 10, 5);
+		return $sources;
+	},
+	10,
+	5
+);
 
 
 

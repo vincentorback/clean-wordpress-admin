@@ -8,10 +8,10 @@ if ( ! function_exists( 'set_last_checked_to_now' ) ) {
 	function set_last_checked_to_now() {
 		include ABSPATH . WPINC . '/version.php';
 
-		$current = new stdClass();
-		$current->updates = array();
+		$current                  = new stdClass();
+		$current->updates         = array();
 		$current->version_checked = $wp_version;
-		$current->last_checked = time();
+		$current->last_checked    = time();
 
 		return $current;
 	}

@@ -3,6 +3,11 @@
 /**
  * Remove social contact methods
  */
+
+// Remove all
+add_filter( 'user_contactmethods', '__return_empty_array' );
+
+// Or remove specific ones
 add_filter(
 	'user_contactmethods',
 	function ( $contact_methods ) {
@@ -17,7 +22,7 @@ add_filter(
 		unset( $contact_methods['youtube'] );
 		unset( $contact_methods['wikipedia'] );
 
-		return $contact_methods; // or you could just return an empty array to remove them all
+		return $contact_methods;
 	}
 );
 

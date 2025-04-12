@@ -6,12 +6,15 @@
  *
  * @link https://developer.wordpress.org/reference/hooks/upload_mimes/
  */
-add_filter('upload_mimes', function ($mime_types) {
-  $mime_types = []; // Remove all types
-  $mime_types['jpg|jpeg|jpe'] = 'image/jpeg'; // Only add jpg for example
+add_filter(
+	'upload_mimes',
+	function ( $mime_types ) {
+		$mime_types                 = array(); // Remove all types
+		$mime_types['jpg|jpeg|jpe'] = 'image/jpeg'; // Only add jpg for example
 
-  return $mime_types;
-});
+		return $mime_types;
+	}
+);
 
 
 /**
@@ -22,16 +25,16 @@ add_filter('upload_mimes', function ($mime_types) {
  */
 
 add_filter(
-  'media_view_strings',
-  function ( $strings ) {
-    $strings['createGalleryTitle']       = null; // Remove "Create gallery"-button.
-    $strings['createPlaylistTitle']      = null; // Remove "Create Audio Playlist"-button.
-    $strings['createVideoPlaylistTitle'] = null; // Remove "Create Video Playlist"-button.
-    $strings['insertFromUrlTitle']       = null; // Remove "Insert from URL"-button.
-    $strings['setFeaturedImageTitle']    = null; // Remove "Featured Image"
+	'media_view_strings',
+	function ( $strings ) {
+		$strings['createGalleryTitle']       = null; // Remove "Create gallery"-button.
+		$strings['createPlaylistTitle']      = null; // Remove "Create Audio Playlist"-button.
+		$strings['createVideoPlaylistTitle'] = null; // Remove "Create Video Playlist"-button.
+		$strings['insertFromUrlTitle']       = null; // Remove "Insert from URL"-button.
+		$strings['setFeaturedImageTitle']    = null; // Remove "Featured Image"
 
-    return $strings;
-  }
+		return $strings;
+	}
 );
 
 
@@ -39,22 +42,22 @@ add_filter(
  * Hide input fields when uploading or editing media
  */
 add_action(
-  'admin_print_scripts',
-  function () {
-    ?><style>
-  .attachment-details .setting[data-setting="alt"], /* Alt attribute */
-  .attachment-details #alt-text-description, /* and the description under it */
+	'admin_print_scripts',
+	function () {
+		?><style>
+	.attachment-details .setting[data-setting="alt"], /* Alt attribute */
+	.attachment-details #alt-text-description, /* and the description under it */
 
-  .attachment-details .setting[data-setting="caption"], /* Media caption */
-  .attachment-details .setting[data-setting="description"], /* Media description */
-  .attachment-details .setting[data-setting="title"], /* Media title */
-  .attachment-details .setting[data-setting="url"], /* Media url */
-  .attachment-details .setting[data-setting="artist"], /* Audio artist */
-  .attachment-details .setting[data-setting="album"] /* Audio album */
-  {
-    display: none;
-  }
-  </style>
-    <?php
-  }
+	.attachment-details .setting[data-setting="caption"], /* Media caption */
+	.attachment-details .setting[data-setting="description"], /* Media description */
+	.attachment-details .setting[data-setting="title"], /* Media title */
+	.attachment-details .setting[data-setting="url"], /* Media url */
+	.attachment-details .setting[data-setting="artist"], /* Audio artist */
+	.attachment-details .setting[data-setting="album"] /* Audio album */
+	{
+	display: none;
+	}
+	</style>
+		<?php
+	}
 );

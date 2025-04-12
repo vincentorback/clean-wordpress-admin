@@ -20,6 +20,9 @@
             "palette": [],
             "text": false
         },
+				"shadow": {
+					"defaultPresets": false
+				},
         "spacing": {
             "customSpacingSize": false
         },

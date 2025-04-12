@@ -76,10 +76,12 @@ add_filter(
 	function ( $admin_bar ) {
 		$title = wp_get_current_user()->display_name;
 
-		$admin_bar->add_node( array(
-			'id' => 'my-account',
-			'title' => $title,
-		));
+		$admin_bar->add_node(
+			array(
+				'id'    => 'my-account',
+				'title' => $title,
+			)
+		);
 	},
 	25
 );
