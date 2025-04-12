@@ -21,6 +21,11 @@ add_filter(
 			$doLog = false;
 		}
 
+		// Don't log log outs
+		if ( 'SimpleUserLogger' == $loggerSlug && 'user_logged_out' == $messageKey ) {
+			$doLog = false;
+		}
+
 		return $doLog;
 	},
 	10,
@@ -34,6 +39,7 @@ add_filter(
 	'simple_history/user_can_clear_log',
 	function ( $user_can_clear_log ) {
 		$user_can_clear_log = false;
+
 		return $user_can_clear_log;
 	}
 );
