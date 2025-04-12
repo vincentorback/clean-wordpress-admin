@@ -1,7 +1,7 @@
 # Clean WordPress Admin
 A collection of functions to clean up WordPress front and back-end to make it easier for editors to work and for you to look at the source code. Hiding content is also a good thing to do to limit the possibilities for your clients to destroy your beautiful site :)
 
-**Tested with WordPress 6.1**
+**Tested with WordPress 6.7**
 
 ## Using
 Do not just include these files in your project. Look at the content, update the options and see what works for you! The code is not optimized for speed. It is optimized for readability. Sometimes the impact on performance makes these functions not eligible.
