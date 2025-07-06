@@ -88,6 +88,9 @@ Remove default roles. Remove capabilities to specific roles or users.
 ### [Search](search.php)
 Disable search query and search form.
 
+### [Settings](settings.php)
+Hide fields from settings pages.
+
 ### [TinyMCE editor](tinymce-editor.php)
 Change settings in the old TinyMCE WYSIWYG editor.
 
