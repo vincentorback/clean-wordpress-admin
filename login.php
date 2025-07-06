@@ -9,3 +9,10 @@ add_action(
 		echo '<style type="text/css">.forgetmenot { display:none; }</style>';
 	}
 );
+
+
+
+/**
+ * Remove the language switcher
+ */
+add_filter( 'login_display_language_dropdown', '__return_false' );
