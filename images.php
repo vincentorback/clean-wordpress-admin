@@ -26,6 +26,7 @@ add_filter(
 	'wp_calculate_image_srcset',
 	function ( $sources, $size_array, $image_src, $image_meta, $attachment_id ) {
 		unset( $sources[1024] );
+		unset( $sources[1536] );
 
 		return $sources;
 	},
