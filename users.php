@@ -82,14 +82,17 @@ if ( ! function_exists( 'hide_profile_fields_with_css' ) ) {
 add_action(
 	'admin_init',
 	function () {
-		add_action('admin_print_scripts-users.php', function () {
-?>
+		add_action(
+			'admin_print_scripts-users.php',
+			function () {
+				?>
 <style>
 .row-actions .resetpassword {
 	display: none;
 }
 </style>
-<?php
-		} );
+				<?php
+			}
+		);
 	}
 );

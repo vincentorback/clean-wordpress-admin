@@ -1,10 +1,10 @@
 # Clean WordPress Admin
-A collection of functions to clean up WordPress front and back-end to make it easier for editors to work and for you to look at the source code. Hiding content is also a good thing to do to limit the possibilities for your clients to destroy your beautiful site :)
+A collection of functions to clean up WordPress front-end and back-end to make it easier for editors to work and for you to look at the source code. Hiding certain functionality also helps prevent clients from accidentally breaking site functionality.
 
 **Tested with WordPress 6.7**
 
 ## Using
-Do not just include these files in your project. Look at the content, update the options and see what works for you! The code is not optimized for speed. It is optimized for readability. Sometimes the impact on performance makes these functions not eligible.
+Do not just include these files in your project. Look at the content, update the options and see what works for you! The code is not optimized for speed. It is optimized for readability. Some functions may have performance implications, so evaluate each one for your specific needs.
 
 You should probably keep some things visible to you or a super admin. Check the user role like this:
 ```php
@@ -19,15 +19,15 @@ if ( ! current_user_can( 'administrator' ) ) {
 Hide items and sub-items in the admin bar. Also known as the Toolbar.
 
 ### [Admin footer](admin-footer.php)
-Hide 'Thank you' text and version number in the admin footer
+Hide 'Thank you' text and version number in the admin footer.
 
 ### [Admin menu](admin-menu.php)
 Hide items and sub-items in the admin menu.
 
 ### [Assets](assets.php)
-Remove some default loaded CSS and Javascript.
+Remove some default loaded CSS and JavaScript.
 
-### [Block settings and styles (theme.json)]()
+### [Block settings and styles (theme.json)](theme.json)
 Control editor settings, and settings for individual blocks.  
 [Read more here](https://developer.wordpress.org/themes/global-settings-and-styles/)
 
@@ -59,13 +59,13 @@ Change editor settings, hide meta boxes, disable block functions, unregister plu
 Disable email functions.
 
 ### [Emojis](emojis.php)
-Disable built-in emojis that loads large JavaScript, CSS and image files :-1:
+Disable built-in emojis that load large JavaScript, CSS and image files.
 
 ### [Feed](feed.php)
 Disable RSS and other feeds.
 
 ### [Head](head.php)
-Clears out generated unwanted stuff from the wp_head hook. Such as feeds and the WordPress version.
+Clears out generated unwanted stuff from the wp_head hook, such as feeds and the WordPress version.
 
 ### [Images](images.php)
 Remove functions related to images like the default link, alignment, and sizes.
@@ -80,7 +80,7 @@ Remove fields and actions from the media editor and set allowed file types.
 Remove specific meta boxes from post-types.
 
 ### [REST API](rest-api.php)
-Hide the url with a custom prefix or disable it completely.
+Hide the URL with a custom prefix or disable it completely.
 
 ### [Roles](roles.php)
 Remove default roles. Remove capabilities to specific roles or users.
