@@ -56,11 +56,7 @@ add_filter( 'rest_endpoints', 'api_users_endpoint_force_auth' );
 add_action(
 	'init',
 	function () {
-		add_filter( 'rest_jsonp_enabled', '__return_false' );
-
-		remove_action( 'xmlrpc_rsd_apis', 'rest_output_rsd' );
-		remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
-		remove_action( 'template_redirect', 'rest_output_link_header', 11 );
+		add_filter( 'rest_enabled', '__return_false' );
 	}
 );
 
@@ -111,7 +107,7 @@ function is_admin_request() {
 	$admin_url = strtolower( admin_url() );
 	$referrer  = strtolower( wp_get_referer() );
 
-	// $requestFromBackend = is_rest() && strpos($admin_url, '/wp-admin/') > 0 && !strpos($admin_url, '/wp-admin/admin-ajax.php');
+	// $requestFromBackend = is_rest() && str_contains($admin_url, '/wp-admin/') > 0 && !str_contains($admin_url, '/wp-admin/admin-ajax.php');
 
 	// if ($requestFromBackend) {
 	// return true;
@@ -121,11 +117,11 @@ function is_admin_request() {
 	 * Check if this is a admin request. If true, it
 	 * could also be a AJAX request from the frontend.
 	 */
-	if ( 0 === strpos( $current_url, $admin_url ) ) {
+	if ( str_contains( $current_url, $admin_url ) ) {
 		/**
 		 * Check if the user comes from a admin page.
 		 */
-		if ( 0 === strpos( $referrer, $admin_url ) ) {
+		if ( str_contains( $referrer, $admin_url ) ) {
 			return true;
 		} else {
 			/**

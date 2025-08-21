@@ -37,7 +37,7 @@ add_action(
 	'admin_init',
 	function () {
 		global $pagenow; // Get current page
-		$redirect = get_admin_url( null, 'edit.php' ); // Where to redirect
+		$redirect = admin_url( 'edit.php' ); // Where to redirect
 
 		if ( $pagenow == 'index.php' ) {
 			wp_redirect( $redirect, 301 );
