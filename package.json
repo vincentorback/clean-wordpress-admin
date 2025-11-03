@@ -10,7 +10,7 @@
     "url": "https://github.com/vincentorback/clean-wordpress-admin.git"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^30.15.0"
+    "@wordpress/scripts": "^30.27.0"
   },
   "scripts": {
     "format:js": "wp-scripts format-js *.js",
