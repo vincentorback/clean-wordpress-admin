@@ -48,6 +48,7 @@ wp.domReady(function () {
   wp.richText.unregisterFormatType('core/italic')
   wp.richText.unregisterFormatType('core/keyboard')
   wp.richText.unregisterFormatType('core/link')
+  wp.richText.unregisterFormatType('core/math')
   wp.richText.unregisterFormatType('core/strikethrough')
   wp.richText.unregisterFormatType('core/subscript')
   wp.richText.unregisterFormatType('core/superscript')
@@ -56,7 +57,20 @@ wp.domReady(function () {
 })
 
 /**
- * Unregister plugins
+ * Disable fullscreen mode
+ */
+wp.domReady(function () {
+  const isFullscreenMode = wp.data
+    .select('core/edit-post')
+    .isFeatureActive('fullscreenMode')
+
+  if (isFullscreenMode) {
+    wp.data.dispatch('core/edit-post').toggleFeature('fullscreenMode')
+  }
+})
+
+/**
+ * Unregister plugin features
  */
 wp.domReady(function () {
   // You can log the IDs registered plugins to see which you can remove
@@ -80,17 +94,4 @@ wp.domReady(function () {
       wp.blocks.unregisterBlockVariation('core/embed', blockVariation.name)
     }
   })
-})
-
-/**
- * Disable fullscreen mode
- */
-wp.domReady(function () {
-  const isFullscreenMode = wp.data
-    .select('core/edit-post')
-    .isFeatureActive('fullscreenMode')
-
-  if (isFullscreenMode) {
-    wp.data.dispatch('core/edit-post').toggleFeature('fullscreenMode')
-  }
 })
