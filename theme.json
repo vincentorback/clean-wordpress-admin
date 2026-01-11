@@ -20,9 +20,9 @@
             "palette": [],
             "text": false
         },
-				"shadow": {
-					"defaultPresets": false
-				},
+        "shadow": {
+            "defaultPresets": false
+        },
         "spacing": {
             "customSpacingSize": false
         },
@@ -58,6 +58,13 @@
                 "typography": {}
             },
             "etc": {}
+        },
+        "elements": {
+            "link": {
+                "typography": {
+                    "textDecoration": "none"
+                }
+            }
         }
     }
 }
