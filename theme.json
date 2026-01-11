@@ -1,11 +1,39 @@
 {
     "version": 2,
+    "styles": {
+        "elements": {
+            "link": {
+                "typography": {
+                    "textDecoration": "none"
+                }
+            }
+        }
+    },
     "settings": {
         "border": {
             "color": false,
             "radius": false,
             "style": false,
             "width": false
+        },
+        "blocks": {
+            "core/heading": {},
+            "core/button": {
+                "border": {
+                    "radius": false
+                },
+                "layout": {
+                    "width": false
+                }
+            },
+            "core/paragraph": {
+                "border": {},
+                "color": {},
+                "custom": {},
+                "layout": {},
+                "spacing": {},
+                "typography": {}
+            }
         },
         "color": {
             "background": false,
@@ -20,6 +48,9 @@
             "palette": [],
             "text": false
         },
+        "dimensions": {
+            "aspectRatio": false
+        },
         "shadow": {
             "defaultPresets": false
         },
@@ -28,6 +59,7 @@
         },
         "typography": {
             "customFontSize": false,
+            "defaultFontSizes": false,
             "dropCap": false,
             "fontFamilies": [],
             "fontSizes": [],
@@ -36,35 +68,6 @@
             "letterSpacing": false,
             "textDecoration": false,
             "textTransform": false
-        },
-        "blocks": {
-            "core/heading": {},
-            "blocks": {
-                "core/button": {
-                    "border": {
-                        "radius": false
-                    },
-                    "layout": {
-                        "width": false
-                    }
-                }
-            },
-            "core/paragraph": {
-                "border": {},
-                "color": {},
-                "custom": {},
-                "layout": {},
-                "spacing": {},
-                "typography": {}
-            },
-            "etc": {}
-        },
-        "elements": {
-            "link": {
-                "typography": {
-                    "textDecoration": "none"
-                }
-            }
         }
     }
 }
