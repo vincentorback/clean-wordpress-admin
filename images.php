@@ -3,6 +3,22 @@
 
 
 /**
+ * Disable jpg image compression
+ *
+ * @link https://developer.wordpress.org/reference/hooks/jpeg_quality/
+ */
+add_filter(
+	'jpeg_quality',
+	function () {
+		return 100;
+	},
+	10,
+	2
+);
+
+
+
+/**
  * Remove image sizes (and create new ones)
  *
  * @link https://developer.wordpress.org/reference/functions/remove_image_size/
