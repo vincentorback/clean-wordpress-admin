@@ -66,6 +66,7 @@
             "fontStyle": false,
             "fontWeight": false,
             "letterSpacing": false,
+						"textAlign": false,
             "textDecoration": false,
             "textTransform": false
         }
