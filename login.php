@@ -16,3 +16,17 @@ add_action(
  * Remove the language switcher
  */
 add_filter( 'login_display_language_dropdown', '__return_false' );
+
+
+
+/**
+ * Change logo link url, instead of wordpress.org
+ *
+ * @link https://developer.wordpress.org/reference/hooks/login_headerurl/
+ */
+add_filter(
+	'login_headerurl',
+	function () {
+		return home_url();
+	}
+);
