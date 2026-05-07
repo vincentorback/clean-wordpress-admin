@@ -26,6 +26,9 @@ add_action(
 		// Since WP 6.4.0
 		remove_action( 'enqueue_scripts', 'wp_enqueue_emoji_styles' );
 
+		// Disable smilies option
+		add_filter( 'option_use_smilies', '__return_false' );
+
 		// Disable from TinyMCE editor. Disabled in block editor by default
 		add_filter(
 			'tiny_mce_plugins',
