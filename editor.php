@@ -42,11 +42,14 @@ add_filter(
  *
  * @link https://developer.wordpress.org/reference/hooks/block_editor_settings_all/
  */
-add_filter( 'block_editor_settings_all', function ( $settings ) {
-	$settings['codeEditingEnabled'] = false;
+add_filter(
+	'block_editor_settings_all',
+	function ( $settings ) {
+		$settings['codeEditingEnabled'] = false;
 
-	return $settings;
-});
+		return $settings;
+	}
+);
 
 
 

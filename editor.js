@@ -27,7 +27,7 @@ wp.hooks.addFilter(
     }
 
     return settings
-  }
+  },
 )
 
 wp.domReady(function () {
