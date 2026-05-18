@@ -72,6 +72,12 @@ wp.domReady(function () {
       wp.blocks.unregisterBlockVariation('core/embed', blockVariation.name)
     }
   })
+
+  // Unregister all group variations (like Grid, Stack, etc.)
+  const variations = wp.blocks.getBlockVariations('core/group')
+  variations.forEach((blockVariation) => {
+    wp.blocks.unregisterBlockVariation('core/group', blockVariation.name)
+  })
 })
 
 /**
