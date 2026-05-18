@@ -14,6 +14,9 @@ add_action(
 		// Remove Dashboard -> Update Core notice
 		remove_submenu_page( 'index.php', 'update-core.php' );
 
+		// Remove first separator
+		remove_menu_page( 'separator1' );
+
 		// Remove Posts
 		remove_menu_page( 'edit.php' );
 		// Remove Posts -> New post
@@ -39,6 +42,9 @@ add_action(
 
 		// Remove Comments
 		remove_menu_page( 'edit-comments.php' );
+
+		// Remove second separator
+		remove_menu_page( 'separator2' );
 
 		// Remove Appearance
 		remove_menu_page( 'themes.php' );
@@ -91,8 +97,13 @@ add_action(
 		remove_submenu_page( 'options-general.php', 'options-discussion.php' );
 		// Remove Settings -> Media
 		remove_submenu_page( 'options-general.php', 'options-media.php' );
+		// Remove Settings -> Privacy
+		remove_submenu_page( 'options-general.php', 'options-privacy.php' );
 		// Remove Settings -> Permalinks
 		remove_submenu_page( 'options-general.php', 'options-permalink.php' );
+
+		// Remove last separator
+		remove_menu_page( 'separator-last' );
 	},
 	999
 );
