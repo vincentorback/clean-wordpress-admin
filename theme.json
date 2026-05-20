@@ -51,6 +51,9 @@
         "dimensions": {
             "aspectRatio": false
         },
+				"filter": {
+					"duotone": false
+				},
         "shadow": {
             "defaultPresets": false
         },
