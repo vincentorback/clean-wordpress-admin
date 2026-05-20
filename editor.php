@@ -38,14 +38,18 @@ add_filter(
 
 
 /**
- * Disable editing blocks as code in the block editor
+ * Change block editor settings
  *
  * @link https://developer.wordpress.org/reference/hooks/block_editor_settings_all/
  */
 add_filter(
 	'block_editor_settings_all',
 	function ( $settings ) {
+		// Disable editing blocks as code in the block editor
 		$settings['codeEditingEnabled'] = false;
+
+		// Remove Openverse media category
+		$settings['enableOpenverseMediaCategory'] = false;
 
 		return $settings;
 	}
