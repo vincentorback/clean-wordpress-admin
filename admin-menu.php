@@ -89,6 +89,8 @@ add_action(
 
 		// Remove Settings
 		remove_menu_page( 'options-general.php' );
+		// Remove Settings -> Connectors
+		remove_submenu_page( 'options-general.php', 'options-connectors.php' );
 		// Remove Settings -> Writing
 		remove_submenu_page( 'options-general.php', 'options-writing.php' );
 		// Remove Settings -> Reading
