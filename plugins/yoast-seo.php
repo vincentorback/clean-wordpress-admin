@@ -32,6 +32,18 @@ add_action(
 
 
 /**
+ * Remove Yoast academy from admin menu
+ */
+add_action(
+	'admin_menu',
+	function () {
+		remove_menu_page('wpseo_page_academy');
+	}
+);
+
+
+
+/**
  * Remove Yoast settings from admin bar
  */
 add_action(
@@ -181,3 +193,18 @@ add_filter( 'wpseo_schema_webpage', function ($data) {
  */
 
  add_filter( 'wpseo_meta_author', '__return_false' );
+
+
+
+
+ /** Hide AI Consent button */
+
+add_action('admin_init', function () {
+  add_action('admin_print_scripts-profile.php', function () {
+    ?><style>
+    .yoast-settings {
+      display: none;
+    }</style>
+  <?php
+  });
+});
