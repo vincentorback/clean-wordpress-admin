@@ -26,7 +26,7 @@ add_filter(
 add_filter(
 	'wp_min_priority_img_pixels',
 	function () {
-		return 2000 * 2000;
+		return 5000 * 5000; // This is default
 	}
 );
 
