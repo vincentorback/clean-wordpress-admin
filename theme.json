@@ -42,6 +42,7 @@
             "customGradient": false,
             "defaultGradients": false,
             "defaultPalette": false,
+            "defaultDuotone": false,
             "duotone": null,
             "gradients": [],
             "link": false,
