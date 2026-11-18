@@ -59,6 +59,10 @@ add_action(
 		remove_submenu_page( 'themes.php', 'nav-menus.php.php' );
 		// Remove Appearance -> Editor
 		remove_submenu_page( 'themes.php', 'theme-editor.php' );
+		// Remove Appearance -> Design
+		remove_submenu_page( 'themes.php', 'site-editor.php' );
+		// Remove Appearance -> Typography
+		remove_submenu_page( 'themes.php', 'font-library.php' );
 
 		// Remove Plugins
 		remove_menu_page( 'plugins.php' );
